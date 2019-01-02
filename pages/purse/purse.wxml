@@ -1,0 +1,22 @@
+<!--pages/purse/purse.wxml-->
+<view class='container'>
+<image src='/images/mypurse.png' class='beijing'>
+  <view class='balance'>账户余额(元)</view>
+  <view class='num'>{{balance}}</view>
+</image>
+<view class='purse_all'>
+  <view class='chongzhi' bindtap='to_recharge'>
+    <view >充值</view>
+    <image src='/images/tiaozhuan2.svg'></image>
+  </view>
+    <view class='chongzhi'>
+    <view >提现</view>
+    <image src='/images/tiaozhuan2.svg'></image>
+  </view>
+   <view class='tixian' bindtap='to_trade'>
+    <view>交易明细</view>
+    <image src='/images/tiaozhuan2.svg'></image>
+  </view>
+
+</view>
+</view>

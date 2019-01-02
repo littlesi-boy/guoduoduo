@@ -1,0 +1,15 @@
+/* pages/service/service.wxss */
+.container{
+  background: #ebebeb;
+}
+.service{
+  background: #ffffff;
+  padding: 28rpx 32rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #ebebeb;
+}
+.service image{
+   width: 44rpx;
+   height: 44rpx;
+}

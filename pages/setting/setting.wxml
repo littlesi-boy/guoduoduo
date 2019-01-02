@@ -1,0 +1,22 @@
+<!--pages/setting/setting.wxml-->
+<view class='container'>
+  <view class='head_line'bindtap="to_edit">
+    <view class='name'>
+      <image src='{{userInfo.head_image}}' class='head_img'></image>
+      <text>{{userInfo.nickname}}</text>
+    </view>
+    <view class='to_edit'>
+      <text>编辑</text>
+      <image src='../../images/tiaozhuan2.svg'></image>
+    </view>
+  </view>
+  <view class='manage' bindtap='to_manage'>
+    <text>切换店铺</text>
+    <image src='../../images/tiaozhuan2.svg'></image>
+  </view>
+  <view class='phone_manage' bindtap='to_up'>
+    <text>手机号</text>
+    <view class='phone'><text>{{content.telephone}}</text><image src='../../images/tiaozhuan2.svg'></image></view>
+  </view>
+  <view></view>
+</view> 

@@ -1,0 +1,44 @@
+<!--pages/cancel_order/cancel_order.wxml-->
+<!--pages/obligation/obligation.wxml-->
+<view class='container'>
+<image src='/images/ob.png' class='beijing'>
+  <view class='wait'>订单已取消
+  </view>
+</image>
+  <view class="addr">
+   <view class='addr_logo'>
+    <image src='/images/addr.svg'></image>
+    <view>鲜果小店</view>
+  </view>
+  <view class='name'>小树林<text>18892682991</text></view>
+  <view class='name'>浙江省杭州市滨江区龙威大厦1001</view>
+  </view>
+    <view class='goods'>
+    <view class="baoguo">包裹1</view>
+    <view class='goods_num'>
+      <image src='/images/Group12@2x.png' class='ware'></image>
+      <image src='/images/Group12@2x.png' class='ware'></image>
+      <image src='/images/Group12@2x.png' class='ware'></image>
+      <image src='/images/Group12@2x.png'class='ware'></image>
+      <view>共5件</view>
+       <image src='/images/tiaozhuan2.svg' class='icon_right'></image>
+    </view>
+      <view class='yunfei'>
+      <view>运费</view>
+      <view>免邮</view>
+    </view>
+    <view class='youhuiquan'>
+      <view>优惠券</view>
+      <view>无</view>
+    </view>
+    <view class='heji'>
+      <view>合计</view>
+      <view class='price'>¥566.50</view>
+    </view>
+  </view>
+  <view class='order_time'>
+  <view class='bianhao'>订单编号：76032426442345</view>
+  <view>下单时间：2018-04-23 12:23:45</view>
+  </view>
+</view>
+

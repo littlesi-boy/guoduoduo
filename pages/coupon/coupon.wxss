@@ -1,0 +1,74 @@
+/* pages/coupon/coupon.wxss */
+.container{
+  background: #ebebeb;
+}
+.banner{
+  background: #ffffff;
+  padding: 20rpx 84rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.active{
+  position: relative;
+}
+#tips{
+  margin-top: 200rpx;
+  text-align: center;
+  color: #999;
+  font-size: 27rpx;
+  font-family: "幼圆"
+}
+.active::after{
+ content: "";
+ width: 72rpx;
+ height: 4rpx;
+ background: #0FBA57;
+ position: absolute;
+ left: 50%;
+ margin-left: -36rpx;
+ bottom: -15rpx;
+}
+.main{
+  padding: 28rpx 36rpx;
+}
+.weishiyong{
+  width: 100%;
+  height: 200rpx;
+  position: relative;
+}
+.all{
+  position: absolute;
+  top: 38rpx;
+  left: 48rpx;
+  display: flex;
+}
+.num,.num1{
+font-size: 80rpx;
+color: #FF515B;
+margin-right: 62rpx;
+}
+.num1{
+  color: #999999;
+}
+.date{
+  flex: 1;
+  color: #999999;
+  font-size: 24rpx;
+}
+.logo{
+  font-size: 24rpx;
+  color: #ffffff;
+  position: absolute;
+  bottom: 10rpx;
+  right: 10rpx;
+  transform:rotate(-45deg);
+}
+.logo1{
+  font-size: 24rpx;
+  color: #ffffff;
+  position: absolute;
+  bottom: 14rpx;
+  right: 4rpx;
+  transform:rotate(-45deg);
+}

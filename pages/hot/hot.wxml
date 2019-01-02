@@ -1,0 +1,31 @@
+<!--pages/hot/hot.wxml-->
+<view class='container'>
+  <view class='banner'>
+    <image src='/images/hot.png'></image>
+  </view>
+
+  <view class='main'>
+    <block wx:for="{{goodlist}}" wx:key="{{index}}" wx:for-item="item" wx:for-index="index">
+  <view class='main_list'  bindtap='to_detail' data-id="{{item.id}}">
+    <image src='{{imgbase+item.goods_image}}' class='goods'>
+    <view class='hot_logo'>
+     <image src='/images/Oval.png' class='hot'></image>
+     <view class='sale'>热</view>
+    </view>
+    </image>
+    <view class='list_right'>
+        <view class='name'>{{item.goods_name}}</view>
+        <view class='num'>{{item.sale_price}} <text>{{item.desc}}</text></view>
+        <view class='price'>
+          <view wx:if="{{item.special_price == 0}}">¥{{item.market_price}}</view>
+          <view wx:else>¥{{item.sale_price}}/{{item.specification}}<text class='cost'>¥{{item.market_price}}/{{item.specification}}</text></view>
+            <image src='/images/gouwuche.svg'></image>
+            <view class='cart_num' wx:if="{{!item.count}}">0</view>
+            <view class='cart_num' wx:else>{{item.count}}</view>
+        </view>
+    </view>
+  </view>
+  </block>
+</view>
+</view>
+

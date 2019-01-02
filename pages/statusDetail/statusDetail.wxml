@@ -1,0 +1,127 @@
+<!--pages/statusDetail/statusDetail.wxml-->
+<view class='container'>
+<image src='/images/ob.png' class='beijing'>
+  <view class='wait' wx:if="{{status==0}}">
+    <view style='font-size:32rpx;'>等待付款</view>
+    <!-- <view class='odd'>剩14分20秒自动关闭</view> -->
+  </view>
+  <view class='wait' wx:if="{{status==1}}">备货中</view>
+  <view class='wait' wx:if="{{status==2}}">配送中</view>
+  <view class='wait' wx:if="{{status==3}}">交易完成</view>
+  <view class='wait' wx:if="{{status==4}}">已取消</view>
+</image>
+   <view class="addr">
+  <view style='padding-bottom:28rpx'>
+   <view class='addr_logo'>
+    <image src='/images/addr.svg'></image>
+    <view>{{content.shopkeeper}}</view>
+  </view>
+  <view class='name'>{{content.shop_name}}<text class='tel'>{{content.telephone}}</text></view>
+  <view class='name'>{{content.address_detail}}</view>
+  </view>
+  <view class='driver' wx:if="{{status==2 || status==3}}">
+    <view class='car-name'>
+      <view>配送小哥</view>
+      <view class='car-name'>{{content.driver_name}}</view>
+    </view>
+    <view class='car-tel'  bindtap='to_tel' data-telephone="{{content.driver_telephone}}">
+      <image src='/images/tel.svg'></image>
+      <view>{{content.driver_telephone}}</view>
+    </view>
+  </view>
+  </view>
+    <view class='goods'>
+    <view class="baoguo">
+        <view>包裹</view>
+        <view wx:if="{{status==1}}" class='sub_cancel'  bindtap="to_tuikuan"  
+        data-ordernum="{{content.order_num}}">申请退款</view>
+        <view wx:if="{{ status==3}}" class='sub_cancel' bindtap="to_drawback" >申请退款</view>
+    </view>
+    <view class='goods_num' bindtap='to_goodsdetail'>
+     <block wx:for="{{content.goods_image}}" wx:key="{{p_index}}" wx:for-item="p_item" wx:for-index="p_index">
+      <image src='{{imgbase+p_item}}' class='ware'></image>
+    </block>
+      <view>共{{content.goods_count}}件</view>
+       <image src='/images/tiaozhuan2.svg' class='icon_right'></image>
+    </view>
+      <view class='yunfei'>
+      <view>运费</view>
+      <view>{{content.expressage_price}}</view>
+    </view>
+    <view class='youhuiquan'>
+      <view>优惠券</view>
+      <view>{{content.coupon_price}}</view>
+    </view>
+    <view class='heji'>
+      <view>合计</view>
+      <view class='price'>¥{{content.order_total_price}}</view>
+    </view>
+  </view>
+  <view class='order_time'>
+  <view class='bianhao'>订单编号：{{content.order_num}}</view>
+  <view>下单时间：{{content.time}}</view>
+  </view>
+  <view class='order_state' wx:if="{{status==0}}">
+    <view class='cancel_order' bindtap='to_cancelorder'>取消订单</view>
+    <view class='pay' catchtap="show_write" data-ordernum="{{content.order_num}}"  data-shopid="{{content.shop_id}}">立即付款</view>
+  </view>
+   <view class='order_state' wx:if="{{status==3}}" style='justify-content:flex-end;'>
+    <view class='del_order'  bindtap='toDel'>删除订单</view>
+  </view>
+  <view class='zhezhao' wx:if="{{showReason}}"></view>
+  <view class="reason" wx:if="{{showReason}}">
+    <view class='choose_reason'>请选择取消原因</view>
+    <view class='chance'>
+     <view catchtap='checkedTap1'>
+       <image src='/images/weixuan@2x.svg' hidden='{{checked1}}'  class='select_icon'></image>
+       <image src='/images/yixuan@2x.svg'  hidden='{{!checked1}}'  class='select_icon'></image>
+    </view>
+      <view>不想要了</view>
+      </view>
+     <view class='chance'>
+         <view catchtap='checkedTap2'>
+       <image src='/images/weixuan@2x.svg' hidden='{{checked2}}'  class='select_icon'></image>
+       <image src='/images/yixuan@2x.svg'  hidden='{{!checked2}}'  class='select_icon'></image>
+    </view>
+      <view>无法签收</view>
+    </view>
+     <view class='chance'>
+         <view catchtap='checkedTap3'>
+       <image src='/images/weixuan@2x.svg' hidden='{{checked3}}'  class='select_icon'></image>
+       <image src='/images/yixuan@2x.svg'  hidden='{{!checked3}}'  class='select_icon'></image>
+    </view>
+      <view>重复购买</view>
+    </view>
+     <view class='chance'>
+    <view catchtap='checkedTap4'>
+       <image src='/images/weixuan@2x.svg' hidden='{{checked4}}'  class='select_icon'></image>
+       <image src='/images/yixuan@2x.svg'  hidden='{{!checked4}}'  class='select_icon'></image>
+    </view>
+      <view>其他</view>
+    </view>
+    <view class='sub' bindtap='cancel_order' data-id="{{content.id}}">提交</view>
+  </view>
+
+
+
+
+
+ <view class="zhezhao" wx:if="{{showMask}}" bindtap="close"></view>
+  <view class="write" wx:if="{{showBox}}" >
+    <view class="write_title">
+      <view>订单支付</view>
+      <image src="/images/close.svg"  bindtap="close"></image>
+    </view>
+      <view class='pay_total1'>￥{{content.order_total_price}}</view>
+    <view class="pay1">
+      <view>付款方式</view>
+      <view>余额</view>
+    </view>
+    <view class='sub_pay1'  bindtap='pay'data-ordernum="{{content.order_num}}" data-shopid="{{content.shop_id}}">立即支付</view>
+  </view>
+
+
+
+
+</view>
+

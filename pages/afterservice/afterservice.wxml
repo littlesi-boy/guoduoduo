@@ -1,0 +1,36 @@
+<!--pages/afterservice/afterservice.wxml-->
+<import src='../publicTemplate/public.wxml' />
+<view class='container'>
+  <view id='mainbody'>
+    <view>
+    <text>客服/加盟热线： <text style='display:inline-block' class='phone'>0571-85872888</text> </text>
+    <view>
+      <text>市场经理： 陈树大  刘碧旭</text>
+      <text decode="{{true}}">技  &ensp; \t术：\t 杨康乐  斯金阳</text>
+    </view>
+    <view>
+    <view decode="{{true}}">
+     联系我们：
+      <text class='phone' style='display:inline-block'>16602315356  \t</text>  陈先生
+    </view>
+     
+    <view decode="{{true}}">
+       <text style='margin-left:150rpx;display:inline-block' class='phone'>15755407961 \t</text> 斯女士 
+    </view>
+      邮箱：<text class='phone' style='display:inline-block;margin-left:66rpx;'>littlesi@foxmail.com</text>
+      <text class='phone' style='margin-left:130rpx'>15755407961@163.com</text>
+    </view>
+  
+  </view>
+  <view style='margin-top:150rpx;text-align:center'>
+   
+    <view>   相关公众号  </view>
+    <image src='/images/tiaoMa.jpg' style='width:100rpx;height:100rpx'></image>
+    <text style='font-size:24rpx;font-family:"楷体"'>公司地址：杭州市滨江区建业路华创大厦四楼果多多网络科技</text>
+  </view>
+  </view>
+</view>
+<view>
+  <template is='logo'>
+  </template>
+</view>

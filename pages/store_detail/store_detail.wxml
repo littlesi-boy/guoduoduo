@@ -1,0 +1,44 @@
+<!--pages/add_shop/add_shop.wxml-->
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class='container'>
+  <view class='name'>
+    <view class="name_text">门店名称</view>
+    <input placeholder='请输入门店名称' value="{{detail.shop_name}}" name="store_name"/>
+  </view>
+    <view class='name'>
+    <view style='margin-right:92rpx;'>联系人</view>
+    <input placeholder='请输入联系人名称' value="{{detail.shopkeeper}}" name="people_name"/>
+  </view>
+    <view class='name'>
+    <view class="name_text">联系电话</view>
+    <input placeholder='请输入联系电话' name="tel" value="{{detail.telephone}}"/>
+  </view>
+      <view class='name'>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker">
+      选择省市区：{{region[0]}}，{{region[1]}}，{{region[2]}}
+    </view>
+  </picker>
+      </view>
+    <view class='name'>
+    <view class="name_text">门店地址</view>
+    <input placeholder='请输入详细的门店地址' name="addr" value="{{detail.address}}"/>
+  </view>
+  <view class='store'>
+    <view class='store_title'>门店照片</view>
+   <view class="pic_box">
+     <block wx:for="{{imgs}}" wx:key="{{index}}">
+        <view class='preview_item'>
+          <image class='close_img' data-index="{{index}}" src='../../images/delectImg.svg'bindtap='del_img'mode='aspectFill'></image>
+          <image src='{{item}}' mode='aspectFill' class='preview_img'></image>
+        </view>
+    </block>  
+    <view class="pic_item" bindtap='selectedImg'>
+      <image src="../../images/tianjia.svg"></image>
+    </view>
+   </view>
+  </view>
+  <button  class="submit"  form-type="submit">提交</button>
+</view>
+</form>

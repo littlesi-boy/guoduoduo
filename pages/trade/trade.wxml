@@ -1,0 +1,19 @@
+<!--pages/trade/trade.wxml-->
+<view class="container">
+<view wx:if="{{list.length>0}}">
+ <block wx:for="{{list}}" wx:key="{{index}}" wx:for-item="item" wx:for-index="index">
+<view class="expend">
+  <view class="pay">
+    <view class="pay_text">{{item.title}}</view>
+    <view class="pay_time">{{item.time}}</view>
+  </view>
+  <view class="pay_num">{{item.money}}</view>
+</view>
+</block>
+</view>
+<view wx:else >
+    <view class='nomessage'>暂时没有交易记录</view>
+  </view>
+
+
+</view>

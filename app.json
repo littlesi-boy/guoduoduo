@@ -1,0 +1,83 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/index/index",
+    "pages/auditing/auditing",
+    "pages/carShop/carShop",
+    "pages/hot/hot",
+    "pages/addr/addr",
+    "pages/nickName/nickName",
+    "pages/order/order",
+    "pages/classify/classify",
+    "pages/purse/purse",
+    "pages/service/service",
+    "pages/edit/edit",
+    "pages/tel/tel",
+    "pages/client/client",
+    "pages/up/up",
+    "pages/aboutus/aboutus",
+    "pages/register/register",
+    "pages/createorder/createorder",
+    "pages/order_detail/order_detail",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/searchlist/searchlist",
+    "pages/statusDetail/statusDetail",
+    "pages/store_detail/store_detail",
+    "pages/store_manage/store_manage",
+    "pages/Myself/myself",
+    "pages/obligation/obligation",
+    "pages/process/process",
+    "pages/success/success",
+    "pages/trade/trade",
+    "pages/sale/sale",
+    "pages/setting/setting",
+    "pages/recharge/recharge",
+    "pages/drawback/drawback",
+    "pages/cancel_order/cancel_order",
+    "pages/afterservice/afterservice",
+    "pages/afterdetail/afterdetail",
+    "pages/coupon/coupon"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "果小小水果连锁",
+    "navigationBarTextStyle":"black"
+  },
+  "permission":{
+    "scope.userLocation":{
+      "desc":"你的位置将用于商品地址的配送"
+    }
+  },
+"tabBar": {
+  "color": "#bfbfbf",  
+  "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "首 页",
+      "iconPath": "images/首.png",
+   "selectedIconPath": "images/首页.png"
+    },
+    {
+      "pagePath": "pages/classify/classify",
+      "text": "分类",
+      "iconPath": "images/类.png",
+     "selectedIconPath": "images/分类.png"
+    },
+      {
+        "pagePath": "pages/carShop/carShop",
+        "text": "购物车",
+        "iconPath": "images/购物.png",
+        "selectedIconPath": "images/购物车.png"
+      }
+      ,
+      {
+        "pagePath": "pages/Myself/myself",
+        "text": "我的",
+        "iconPath": "images/我.png",
+        "selectedIconPath": "images/我的.png"
+      }
+  ]
+}
+}

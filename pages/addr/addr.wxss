@@ -1,0 +1,88 @@
+page{
+   background: #F0F0F0 ;
+}
+.row{
+  margin-top: 20rpx;
+  overflow: hidden;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #ccc;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  color: #777;
+  background: #fff;
+ 
+}
+#headList{
+  position: relative;
+  width: 100%;
+  height: 160rpx;
+  padding: 12rpx;
+  border-bottom: 4rpx dotted #999;
+}
+#headList>image{
+  position: absolute;
+  left: 10rpx;
+  top: 45%;
+}
+.info-input{
+  height: 100rpx;
+  margin-left: 50rpx;
+  color: #777;
+  float: left;
+}
+#isDefault{
+  display: inline-block;
+  width: 50rpx;
+  height: 35rpx;
+  background-color: orange;
+  opacity: 0.6;
+  font-size: 22rpx;
+  color: #bbb;
+}
+.addList{
+  font-size: 25rpx;
+  color: #555;
+  width: 100%;
+  height: 90%;
+  margin-top: 60rpx;
+  background-color: palegoldenrod
+}
+.info-input1{
+  height: 100rpx;
+  margin-left: 50rpx;
+  color: #777;
+    float: left;
+    width: 420rpx;
+}
+.button{
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  background: #33FF99;
+  float: left;
+  margin-left: 10rpx;
+  margin-top: 15rpx;
+  color: #FFFFFF;
+}
+.submit{
+  margin-top: 50rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  background: #00CCFF;
+   color: #FFFFFF;
+}
+.success{
+  background: #ffffff;
+ 
+}
+.cheer{
+  text-align: center;
+  line-height: 400rpx;
+  font-size: 60rpx;
+  position: relative;
+}
+.return{
+  margin: 20rpx;
+ 
+}

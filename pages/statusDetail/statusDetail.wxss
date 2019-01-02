@@ -1,0 +1,281 @@
+.container{
+  background: #ebebeb;
+  padding-bottom: 160rpx;
+}
+.beijing{
+  width: 100%;
+  height: 160rpx;
+  position: relative;
+}
+.wait{
+ color: #ffffff;
+ position: absolute;
+ top: 56rpx;
+ left: 80rpx;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.odd{
+  margin-left: 288rpx;
+  font-size: 24rpx;
+}
+.addr{
+  padding: 28rpx 32rpx;
+  background: #ffffff;
+  margin-top: 20rpx;
+}
+.addr_logo{
+  display: flex;
+  align-items: center;
+  font-size: 36rpx;
+  color: #333333;
+  margin-bottom: 12rpx;
+}
+.addr_logo image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 20rpx;
+}
+.driver{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 28rpx;
+  border-top: 2rpx solid #ebebeb;
+}
+.car-name{
+  display: flex;
+  align-items: center;
+}
+.car-mingzi{
+  display: inline-block;
+  margin-left:24rpx;
+}
+.car-tel{
+  display: flex;
+  align-items: center;
+  color: #0FBA57;
+}
+.car-tel image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 8rpx;
+}
+.name{
+  color: #999999;
+  margin-left: 52rpx;
+}
+.goods{
+  padding: 28rpx 32rpx;
+  background: #ffffff;
+  margin-top: 20rpx;
+}
+.baoguo{
+  font-size: 32rpx;
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub_cancel{
+  font-size: 28rpx;
+  color: #999999;
+  padding: 12rpx 28rpx;
+  border: 2rpx solid #CCCCCC;
+  border-radius: 200rpx;
+}
+.goods_num{
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  color: #999999;
+}
+.ware{
+  width: 120rpx;
+  height:120rpx;
+  margin-right: 20rpx;
+}
+.icon_right{
+  width: 44rpx;
+  height: 44rpx;
+}
+.goods_jine{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28rpx;
+  color: #666666;
+}
+.all{
+  background: #ffffff;
+  padding: 0 32rpx;
+  margin-top: 20rpx;
+}
+.yunfei,.youhuiquan{
+  color: #666666;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+}
+.youhuiquan{
+  padding-bottom: 28rpx;
+  border-bottom: 2rpx solid #ebebeb;
+}
+.heji{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+    color: #666666;
+}
+.price{
+  color: #FF5C38;
+}
+.order_time{
+background:#ffffff;
+padding: 28rpx 20rpx;
+font-size: 24rpx;
+color: #999999;
+margin-top: 20rpx;
+}
+.bianhao{
+  margin-bottom: 16rpx;
+}
+.order_state{
+  width: 100%;
+  box-sizing: border-box;
+  height:130rpx;
+  background:#ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 16rpx 32rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 284rpx;
+}
+.cancel_order,.del_order{
+  padding: 14rpx 42rpx;
+  border: 2rpx solid #BBBBBB;
+  border-radius: 200rpx;
+  margin-right: 20rpx;
+}
+.pay{
+  padding: 14rpx 42rpx;
+  color: #ffffff;
+  background: #0FBA57;
+  border-radius: 200rpx;
+}
+.zhezhao{
+  background:rgba(0,0,0,0.5);
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.reason{
+  background: #ffffff;
+  width: 544rpx;
+  height: 586rpx;
+  position: fixed;
+  left: 50%;
+  bottom: 50%;
+  margin-bottom:-293rpx;
+  margin-left:-272rpx;
+  z-index: 100;
+  border-radius: 20rpx;
+}
+
+.choose_reason{
+  font-size: 32rpx;
+  color: #333333;
+  height:106rpx;
+  text-align: center;
+  line-height: 106rpx;
+   border-bottom: 2rpx solid #ebebeb;
+}
+.chance{
+  display: flex;
+  align-items: center;
+  height: 96rpx;
+  border-bottom: 2rpx solid #ebebeb;
+  text-align: center;
+  padding-left: 188rpx;
+}
+.chance image{
+  width:32rpx;
+  height:32rpx;
+  margin-right: 24rpx;
+}
+.sub{
+  color: #ffffff;
+  background: #CCCCCC;
+  height: 96rpx;
+  text-align: center;
+  line-height: 98rpx;
+}
+.select_icon{
+  width: 32rpx;
+  height: 32rpx;
+}
+.zhezhao{
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.write{
+  width: 100%;
+  background: #ffffff;
+  box-sizing: border-box;
+  padding: 32rpx;
+  position: fixed;
+  bottom: 0;
+  z-index: 999999;
+  font-size: 32rpx;
+  color: #999999;
+}
+.write_title{
+  text-align: center;
+  font-size: 36rpx;
+  color: #000000;
+  position: relative;
+  
+}
+.write_title image{
+  width:44rpx;
+  height:44rpx;
+  position: absolute;
+  right: 0;
+  top:0;
+}
+.pay_total1{
+  font-size: 56rpx;
+  color: #333333;
+  text-align: center;
+  padding: 68rpx 0;
+}
+.pay1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 344rpx;
+}
+.sub_pay1{
+  color: #ffffff;
+  font-size: 32rpx;
+  position: fixed;
+  bottom: 40rpx;
+  background: #0FBA57;
+  border-radius: 200rpx;
+  padding:22rpx 252rpx;
+ margin-left: 20rpx;
+}

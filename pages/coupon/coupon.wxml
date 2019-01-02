@@ -1,0 +1,62 @@
+<!--pages/coupon/coupon.wxml-->
+<view class='container'>
+   <view class="banner">
+    <view class="hot  {{curr==0 ? 'active' : ''}}" bindtap='choose_part' data-type="0">未使用</view>
+    <view class="new  {{curr==1 ? 'active' : ''}}" bindtap='choose_part' data-type="1">已使用</view>
+    <view class="reward  {{curr==2 ? 'active' : ''}}" bindtap='choose_part' data-type="2">已过期</view>
+  </view>
+  <view  wx:if="{{curr==0}}">
+    <block wx:for="{{list1}}" wx:key="{{index}}" wx:for-item="item" wx:for-index="index">
+      <view class='main' bindtap="select" data-id="{{item.id}}"  data-coupon_money="{{item.coupon_money}}" 
+      data-limit_money="{{item.limit_money}}"  data-start_time="{{item.start_time1}}" data-end_time="{{item.end_time1}}">
+        <image src='/images/youhuiquan1.png' class='weishiyong'>
+        <view class='all'>
+        <view class='num'>¥{{item.limit_money}}</view>
+          <view class='date'>
+            <view style='font-size: 32rpx;'>满{{item.coupon_money}}减{{item.limit_money}}</view>
+            <view style='margin-top:12rpx;'>{{item.start_time}}至{{item.end_time}}</view>
+          </view>
+        </view>
+        <view class='logo'>可用</view>
+        </image>
+      </view>
+    </block>
+  </view>
+
+
+  <view  wx:elif="{{curr==1}}">
+    <block wx:for="{{list2}}" wx:key="{{index}}" wx:for-item="item" wx:for-index="index">
+        <view class='main'>
+          <image src='/images/CombinedShape@2x.png' class='weishiyong'>
+          <view class='all'>
+          <view class='num1'>¥{{item.limit_money}}</view>
+            <view class='date'>
+              <view style='font-size: 32rpx;'>满{{item.coupon_money}}减{{item.limit_money}}</view>
+              <view style='margin-top:12rpx;'>{{item.start_time}}至{{item.end_time}}</view>
+            </view>
+          </view>
+          <view class='logo1'>已使用</view>
+          </image>
+        </view>
+      </block>
+  </view>
+
+  <view  wx:elif="{{curr==2}}">
+ <block wx:for="{{list3}}" wx:key="{{index}}" wx:for-item="item" wx:for-index="index">
+  <view class='main'>
+    <image src='/images/CombinedShape@2x.png' class='weishiyong'>
+    <view class='all'>
+    <view class='num1'>¥{{item.limit_money}}</view>
+      <view class='date'>
+        <view style='font-size: 32rpx;'>满{{item.coupon_money}}减{{item.limit_money}}</view>
+        <view style='margin-top:12rpx;'>{{item.start_time}}至{{item.end_time}}</view>
+      </view>
+    </view>
+    <view class='logo1'>已过期</view>
+    </image>
+  </view>
+  </block>
+  </view>
+  <view id='tips'> <text>-----『 这里空空的，还什么都没有哦^^』-----</text> </view>
+    </view>
+  

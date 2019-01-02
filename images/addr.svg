@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-地址@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon-地址" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-3" x="0" y="0" width="16" height="16"></rect>
+        <path d="M8,15.2857143 C4.66666667,10.9361873 3,7.84094917 3,6 C3,3.23857625 5.23857625,1 8,1 C10.7614237,1 13,3.23857625 13,6 C13,7.84094917 11.3333333,10.9361873 8,15.2857143 Z M8,8.14285714 C9.18346732,8.14285714 10.1428571,7.18346732 10.1428571,6 C10.1428571,4.81653268 9.18346732,3.85714286 8,3.85714286 C6.81653268,3.85714286 5.85714286,4.81653268 5.85714286,6 C5.85714286,7.18346732 6.81653268,8.14285714 8,8.14285714 Z" id="Combined-Shape" fill="#999999"></path>
+    </g>
+</svg>

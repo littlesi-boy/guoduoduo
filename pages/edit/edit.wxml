@@ -1,0 +1,22 @@
+<!--pages/edit/edit.wxml-->
+<view class='container'>
+  <view class='item'>
+    <view>头像：</view>
+    <image src='{{userInfo.avatarUrl}}'></image>
+  </view>
+  <view class='item'>
+    <view>昵称：</view>
+   <view>{{userInfo.nickName}}</view>
+  </view>
+  <view class='item'>
+    <view>性别：</view>
+    <view>{{userInfo.gender}}</view>
+  </view>
+   <!-- <view class='item'>
+    <view>性别</view>
+   <view class='choose'>
+    <view>未选择</view>
+    <image src='/images/tiaozhuan2.svg'></image>
+  </view> -->
+  <!-- </view> -->
+</view>

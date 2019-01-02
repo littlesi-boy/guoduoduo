@@ -1,0 +1,194 @@
+<!--pages/order/order.wxml-->
+<view class='container'>
+  <view class='no-data' wx:if="{{list.length==0}}">暂无订单</view>
+  <view class='tab_list'>
+    <view class="tab_item {{type== 999 ? 'curr' : ''}}" bindtap='tabChange' data-type="999">全部</view>
+    <view class="tab_item {{type== 0 ? 'curr' : ''}}" bindtap='tabChang1' data-type="0">待付款</view>
+    <view class="tab_item {{type== 1 ? 'curr' : ''}}" bindtap='tabChange2' data-type="1">待发货</view>
+    <view class="tab_item {{type== 2 ? 'curr' : ''}}" bindtap='tabChange3' data-type="2">已发货</view>
+     <view class="tab_item {{type== 3 ? 'curr' : ''}}" bindtap='tabChange4' data-type="3">已完成</view>
+  </view>
+ 
+</view>
+<block wx:for="{{list}}" wx:key="{{index}}" wx:for-item="item" wx:for-index="index">
+  <!-- 全部 -->
+  <view class='order_item' wx:if="{{status0}}" bindtap="reserve" data-id='{{item.id}}'>
+    <view wx:if='{{item.order_status==1}}'>
+      <view class='title_line'>
+        <view class='time'>下单时间：{{item.create_time}}</view>
+        <view class='status'>{{item.order_status==1? "已完成" : "订单"}}</view>
+      </view>
+      <view class='goods_list'>
+        <view class='goods_pic' style='text-align:center'>
+          <image src='{{item.snap_img}}' class='pic'></image>
+          <text style='font-size:27rpx;color:#666'>{{item.snap_name}}</text>
+        </view>
+        <view class='total'>
+          <view>共 {{item.order_detail[0].count}}件商品</view>
+          <view class='price'>实付款：
+            <text>¥{{item.goods_amount}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='btns'>
+        <view class='btn active_btn' bindtap='reserve' data-id='{{item.id}}'>查看详情</view>
+      </view>
+    </view>
+
+    <view wx:if='{{item.pay_status==0}}'>
+      <view class='title_line'>
+        <view class='time'>订单时间：{{item.create_time}}</view>
+        <view class='status'>{{item.pay_status==0?'待付款':'待发货'}}</view>
+      </view>
+      <view class='goods_list'>
+        <view class='goods_pic' style='text-align:center'>
+          <image src='{{item.snap_img}}' class='pic'></image>
+          <text style='font-size:27rpx;color:#666'>{{item.snap_name}}</text>
+        </view>
+        <view class='total'>
+          <view>共 {{item.order_detail[0].count}}件商品</view>
+          <view class='price'>需付款：
+            <text>¥{{item.goods_amount}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='btns'>
+        <view class='btn active_btn' bindtap='reserve' data-id='{{item.id}}'>查看详情</view>
+         <view style='margin-left:15rpx' class='btn active_btn' bindtap='payfor' data-count='{{item.order_detail[0].count}}' data-goods_id='{{item.order_detail[0].goods.id}}'>去付款</view>
+      </view>
+   
+    </view>
+
+
+    <view wx:if='{{item.shipping_status==0}}'>
+      <view class='title_line'>
+        <view class='time'>订单时间：{{item.create_time}}</view>
+        <view class='status'>{{item.shipping_status==0?'待发货':'订单'}}</view>
+      </view>
+      <view class='goods_list'>
+        <view class='goods_pic' style='text-align:center'>
+          <image src='{{item.snap_img}}' class='pic'></image>
+          <text style='font-size:27rpx;color:#666'>{{item.snap_name}}</text>
+        </view>
+        <view class='total'>
+          <view>共 {{item.order_detail[0].count}}件商品</view>
+          <view class='price'>实付款：
+            <text>¥{{item.goods_amount}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='btns'>
+        <view class='btn active_btn' bindtap='reserve' data-id='{{item.id}}'>查看详情</view>
+      </view>
+    </view>
+
+
+    <view wx:if='{{item.shipping_status==1}}'>
+      <view class='title_line'>
+        <view class='time'>订单时间：{{item.create_time}}</view>
+        <view class='status'>{{item.shipping_status==1?'已发货':'订单'}}</view>
+      </view>
+      <view class='goods_list'>
+        <view class='goods_pic' style='text-align:center'>
+          <image src='{{item.snap_img}}' class='pic'></image>
+          <text style='font-size:27rpx;color:#666'>{{item.snap_name}}</text>
+        </view>
+        <view class='total'>
+          <view>共 {{item.order_detail[0].count}}件商品</view>
+          <view class='price'>实付款：
+            <text>¥{{item.goods_amount}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='btns'>
+        <view class='btn active_btn' bindtap='reserve' data-id='{{item.id}}'>查看详情</view>
+      </view>
+    </view>
+  </view>
+  <!-- 待付款 -->
+  <view class='order_item' wx:if="{{status1}}" bindtap="reserve" data-id='{{item.id}}'>
+    <view class='title_line'>
+      <view class='time'>下单时间：{{item.create_time}}</view>
+      <view class='status'>待付款</view>
+    </view>
+    <view class='goods_list'>
+      <view class='goods_pic' style='text-align:center'>
+        <image src='{{item.snap_img}}' class='pic'></image>
+        <text style='font-size:27rpx;color:#666'>{{item.snap_name}}</text>
+      </view>
+      <view class='total'>
+        <view>共 {{item.order_detail[0].count}}件商品</view>
+      </view>
+    </view>
+    <view class='btns'>
+      <view class='btn active_btn' style='display:inline-block' bindtap='reserve' data-id='{{item.id}}'>查看详情</view>
+       <view style='margin-left:15rpx;display:inline-block' class='btn active_btn' bindtap='payfor' data-count='{{item.order_detail[0].count}}' data-goods_id='{{item.order_detail[0].goods.id}}'>去付款</view>
+    </view>
+  </view>
+
+  <!-- 待发货  -->
+  <view class='order_item' wx:if="{{status2}}" bindtap="reserve" data-id='{{item.id}}'>
+    <view class='title_line'>
+      <view class='time'>下单时间：{{item.create_time}}</view>
+      <view class='status'>待发货</view>
+    </view>
+    <view class='goods_list'>
+      <view class='goods_pic' style='text-align:center'>
+        <image src='{{item.snap_img}}' class='pic'></image>
+        <text style='font-size:27rpx;color:#666'>{{item.snap_name}}</text>
+      </view>
+     
+      <view class='total'>
+        <view>共 {{item.order_detail[0].count}}件商品</view>
+      </view>
+       </view>
+      <view class='btns'>
+        <view class='btn active_btn' bindtap='reserve' data-id='{{item.id}}'>查看详情</view>
+      </view>
+    </view>
+
+
+
+
+  <!-- 已完成 -->
+  <view class='order_item' wx:if="{{status5}}" bindtap="reserve" data-id='{{item.id}}'>
+    <view class='title_line'>
+      <view class='time'>下单时间：{{item.create_time}}</view>
+      <view class='status'>已完成</view>
+    </view>
+    <view class='goods_list'>
+      <view class='goods_pic' style='text-align:center'>
+        <image src='{{item.snap_img}}' class='pic'></image>
+        <text style='font-size:27rpx;color:#666'>{{item.snap_name}}</text>
+      </view>
+      <view class='total'>
+        <view>共 {{item.order_detail[0].count}}件商品</view>
+      </view>
+    </view>
+    
+    <view class='btns'>
+      <view class='btn active_btn' bindtap='reserve' data-id='{{item.id}}'>查看详情</view>
+    </view>
+  </view>
+
+  <!-- 已发货 -->
+  <view class='order_item' wx:if="{{status3}}" bindtap="reserve" data-id='{{item.id}}'>
+    <view class='title_line'>
+      <view class='time'>下单时间：{{item.create_time}}</view>
+      <view class='status'>已发货</view>
+    </view>
+    <view class='goods_list'>
+      <view class='goods_pic' style='text-align:center'>
+        <image src='{{item.snap_img}}' class='pic'></image>
+        <text style='font-size:27rpx;color:#666'>{{item.snap_name}}</text>
+      </view>
+      <view class='total'>
+        <view>共 {{item.order_detail[0].count}}件商品</view>
+      </view>
+      <view class='btns'>
+        <view class='btn active_btn' bindtap='reserve' data-id='{{item.id}}'>查看详情</view>
+      </view>
+    </view>
+
+  </view>
+</block>

@@ -1,0 +1,157 @@
+/* pages/order/order.wxss */
+.container{
+  background-color: #eee;
+  padding: 100rpx 0 20rpx;
+}
+page{
+  font-size: 28rpx;
+}
+.tab_list{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  background-color: #fff;
+}
+.tab_list .tab_item{
+  line-height: 40rpx;
+  padding: 18rpx 0;
+  width: 150rpx
+}
+.curr{
+  position: relative;
+}
+.curr::after{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 80rpx;
+  bottom: 0;
+  left: 50%;
+  margin-left: -40rpx;
+  background: #0FBA57;
+}
+.order_item{
+  background-color: #fff;
+  padding-left: 32rpx;
+  margin-bottom:20rpx; 
+}
+.order_item .title_line{
+  padding: 32rpx 0 30rpx;
+  font-size: 12px;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ebebeb;
+  padding-right: 32rpx;
+}
+.order_item .title_line .status{
+  font-size: 28rpx;
+  color: #FF5C38;
+}
+.goods_list{
+  padding-right: 32rpx;
+}
+.goods_pic{
+  display: flex;
+  align-items: center;
+  padding: 40rpx 0 20rpx;
+}
+.goods_pic .pic{
+  height: 120rpx;
+  width: 120rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+.goods_pic .pic:nth-child(5n){
+  margin-right:0rpx;
+}
+.order_item  .total{
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30rpx;
+}
+.btns{
+  border-top: 2rpx solid #ebebeb;
+  padding: 12rpx 20rpx 10rpx 0;
+  text-align: right;
+  display: inline-block;
+  font-size: 28rpx;
+  margin-left: 300rpx;
+}
+
+.btns .btn{
+  display: inline-block;
+  margin-left:18rpx;
+  color: #666666;
+  line-height: 40rpx;
+  padding: 12rpx 25rpx;
+  border: 2rpx solid #CCCCCC;
+  border-radius: 40rpx; 
+}
+.btns .active_btn{
+  background: #0FBA57;
+  border: none;
+  color: #eee;
+}
+
+.zhezhao{
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.write{
+  width: 100%;
+  background: #ffffff;
+  box-sizing: border-box;
+  padding: 32rpx;
+  position: fixed;
+  bottom: 0;
+  z-index: 999999;
+  font-size: 32rpx;
+  color: #999999;
+}
+.write_title{
+  text-align: center;
+  font-size: 36rpx;
+  color: #000000;
+  position: relative;
+  
+}
+.write_title image{
+  width:44rpx;
+  height:44rpx;
+  position: absolute;
+  right: 0;
+  top:0;
+}
+.pay_total{
+  font-size: 56rpx;
+  color: #333333;
+  text-align: center;
+  padding: 68rpx 0;
+}
+.pay{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 344rpx;
+}
+.sub_pay{
+  color: #ffffff;
+  font-size: 32rpx;
+  position: fixed;
+  bottom: 40rpx;
+  background: #0FBA57;
+  border-radius: 200rpx;
+  padding:22rpx 252rpx;
+ margin-left: 20rpx;
+}

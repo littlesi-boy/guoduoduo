@@ -1,0 +1,16 @@
+var filters = {
+  toFix: function (value) {
+    return value.toFixed(1)//保留1位小数
+  }
+}
+var filters1 = {
+  toFix1: function(params){
+    if(params.length>10){
+      return params.slice(0,13)+'...'
+    }
+  }
+}
+module.exports = {
+  toFix: filters.toFix,
+  toFix1: filters1.toFix1
+}

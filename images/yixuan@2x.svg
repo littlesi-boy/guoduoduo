@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>yixuan@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="yixuan" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-25" x="0" y="0" width="22" height="22"></rect>
+        <circle id="Oval" fill="#FFA219" cx="8" cy="8" r="8"></circle>
+        <path d="M7.10723305,2.89267767 C7.10723305,2.6472123 6.88337542,2.4482233 6.60723305,2.4482233 C6.33109067,2.4482233 6.10723305,2.6472123 6.10723305,2.89267767 L6.10723305,10.8928562 C6.10723305,11.1383216 6.33109067,11.3373106 6.60723305,11.3373106 L10.607233,11.3373106 C10.8833754,11.3373106 11.107233,11.1383216 11.107233,10.8928562 C11.107233,10.6473909 10.8833754,10.4484019 10.607233,10.4484019 L7.10723305,10.4484019 L7.10723305,2.89267767 Z" id="Rectangle-8" fill="#FFFFFF" fill-rule="nonzero" transform="translate(8.607233, 6.892767) scale(-1, 1) rotate(-45.000000) translate(-8.607233, -6.892767) "></path>
+    </g>
+</svg>

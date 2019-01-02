@@ -1,0 +1,11 @@
+<!--pages/tel/tel.wxml-->
+<view class='container'>
+ <input class="tel" placeholder='请输入手机号'  name="tel" bindinput='getPhoneValue'/>
+  <view class='code'>
+    <input placeholder='请发送验证码' name="code" bindinput='getCodeValue'/>
+    <view bindtap='getcode' wx:if="{{count==60}}">发送验证码</view>
+    <view wx:elif="{{count<60}}">{{count}}s后失效</view>
+  </view>
+  <view class='binding' bindtap='toBind'>绑定</view>
+  <view class='agree'>我已阅读并同意<view class='protocol'>《果小小服务协议》</view></view>
+</view>

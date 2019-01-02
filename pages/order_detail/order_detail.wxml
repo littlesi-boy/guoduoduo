@@ -1,0 +1,26 @@
+<!--pages/order_detail/order_detail.wxml-->
+<view class='container'>
+  <view class='main'>
+    <block wx:for='{{list}}' wx:key='{{index}}'>
+      <view class='baoguo'>
+        <view>包裹</view>
+        <view style='color: #999999;'>共{{item.count}}件</view>
+      </view>
+      <view class="detail_all">
+        <!-- <image src='/images/Group10@2x.png' class='goods'></image> -->
+        <view>
+          <image src='{{item.goods.main_img}}' style='width:95rpx;height:95rpx'></image>
+        </view>
+        <view class='all'>
+          <view class='name'>
+            <view>{{item.goods.name}}</view>
+            <view style='font-style:oblique'>¥ {{item.goods.sale_price}}</view>
+          </view>
+          <view style='font-style:oblique'>单价：¥ {{item.goods.sale_price}}</view>
+          <view>数量：{{item.count}}份</view>
+        </view>
+      </view>
+    </block>
+  </view>
+   <view style='margin-top:25rpx;text-align:center;margin:auto;color:#999;font-size:21rpx;'>---------订单也是有底线的哦---------</view>
+</view>

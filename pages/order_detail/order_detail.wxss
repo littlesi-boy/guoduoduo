@@ -1,0 +1,39 @@
+/* pages/order_detail/order_detail.wxss */
+.container{
+  background: #eee;
+  padding-bottom: 20rpx;
+  font-size: 28rpx;
+}
+.main{
+
+  padding: 0 25rpx;
+   background: #fae7e7;
+   margin-bottom: 20rpx;
+   border-bottom: 4rpx double skyblue
+}
+.baoguo{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20rpx 0;
+}
+.goods{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}
+.detail_all{
+  display: flex;
+  padding: 28rpx 0;
+}
+.all{
+  flex: 1;
+  color: #999999;
+}
+.name{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12rpx;
+  color: #333333;
+}

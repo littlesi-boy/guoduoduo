@@ -1,0 +1,5 @@
+<template name='logo'>
+  <view>
+     <image src='../../images/guoduoduo.png' style='width:120rpx;height:2.2rem;object-fit:cover;margin-left:40%;margin-top:15rpx'></image>
+  </view>
+</template>

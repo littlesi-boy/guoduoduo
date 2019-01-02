@@ -1,0 +1,21 @@
+<!--pages/service/service.wxml-->
+<import src='../publicTemplate/public.wxml' />
+<view class='container' >
+  <view class='service' bindtap='to_afterservice'>
+    <view>售后服务</view>
+    <image src='/images/tiaozhuan2.svg'></image>
+  </view>
+  <!-- <view class='service'>
+    <view>运费规则</view>
+    <image src='/images/tiaozhuan2.svg'></image>
+  </view> -->
+  <view class='service' bindtap='to_aboutus'>
+    <view>关于我们</view>
+    <image src='/images/tiaozhuan2.svg'></image>
+  </view>
+</view>
+<view>
+  <template is='logo'>
+  </template>
+</view>
+

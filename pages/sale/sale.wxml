@@ -1,0 +1,25 @@
+<!--pages/sale/sale.wxml-->
+<view class='container'>
+  <view class='banner'>
+    <image src='/images/salebanner.png'></image>
+  </view>
+
+  <view class='main'>
+  <block wx:for="{{goodlist}}" wx:key="{{index}}" wx:for-item="item" wx:for-index="index">
+  <view class='main_list' bindtap='to_detail' data-id="{{item.id}}">
+    <image src='{{imgbase+item.goods_image}}'><view class='sale'>特价</view></image>
+    <view class='list_right'>
+        <view class='name'>{{item.goods_name}}</view>
+        <view class='num'>{{item.specification}} <text>{{item.specification_detail}}</text></view>
+        <view class='price'>
+          <view>¥{{item.special_price}}/{{item.specification}}<text class='cost'>¥{{item.original_price}}/{{item.specification}}</text></view>
+          <image src='/images/gouwuche.svg'>
+          </image>
+              <view class='cart_num' wx:if="{{!item.goods_count}}">0</view>
+            <view class='cart_num' wx:else>{{item.goods_count}}</view> 
+        </view>
+    </view>   
+  </view>
+  </block>
+</view>
+</view>

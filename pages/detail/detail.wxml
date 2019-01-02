@@ -1,0 +1,75 @@
+<!--pages/detail/detail.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<import src='../publicTemplate/public.wxml' />
+<wxs module="filters1" src="../filter/filter.wxs"></wxs>
+<view class='commodity_screen'  wx:if="{{showModalStatus}}"></view>
+<view class="container">
+    <swiper indicator-dots="{{indicatorDots}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="goods">
+  <block wx:for="{{content.goods_images}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{item.imgurl}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+  <view class='intriduce'>
+    <view class='name'>
+      <view class="intriduce_name">{{content.name}}</view>
+      <!-- <view class='mold'>{{content.name}}</view> -->
+    </view>
+    <view class='describe'>{{content.desc}}</view>
+     <view class='price'>¥{{content.sale_price}}/份<text class='cost'>{{content.market_price}}</text></view>
+  </view>
+  <view class='good_title' id='descb'>商品详情</view>
+  <view class='good_detail'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+  <view class='cart' >
+      <view class='cart_logo' >
+      <contact-button class='cBtn' type="default-dark" size="20" session-from="weapp">
+      <view class='kefu' style='height:36rpx;color:orangered;font-weight:bold'>客服</view>
+</contact-button>
+      </view>
+    <view class='cart_logo' bindtap='to_cart' data-id='{{content.id}}'>
+      <image src='/images/gouwuche.svg' ></image>
+        <view class='num' wx:if="{{count>0}}">{{count}}</view>
+    </view>
+    <view class='cart_add' bindtap='addCart' >加入购物车</view>
+    <view class='cart_add' bindtap='purseCart'  style='  background-color: orangered'>立即购买</view>
+    </view>
+<view id='scroll' wx:if='{{gdd}}' class='tips:{{gxx}} commodity_attr_box' animation="{  {animationData}}" wx:if="{{showModalStatus}}">
+<block wx:for="{{content}}"  wx:for-item="item"  wx:key='this'>
+  <view class='cart_item'>  
+    <view class='goods_warp' >
+    <!-- <view catchtap='checkedTap' data-index='{{index}}'>
+      <image src='/images/weixuan@2x.svg' hidden='{{checked[index].checked}}'  class='select_icon'></image>
+      <image src='/images/yixuan@2x.svg'  hidden='{{!checked[index].checked}}' class='select_icon'></image>
+    </view> -->
+      <view class='goods'>
+        <image src='{{content.goods_images[0].imgurl}}' class='goods_pic'></image>
+        <view class='goods_info'>
+          <view class='goods_name' >{{content.name}}</view>
+          <view class='goods_spec' style='font-size:22rpx'>{{content.market_price}} <text>{{filters1.toFix1(content.desc)}}</text></view>
+          <view class='goods_price' wx:if="{{content.sale_price==0}}">¥{{content.market_price}}</view>
+          <view class='goods_price' wx:else><text class='curr_price'>¥{{content.sale_price}}</text><text class='old_price'>¥{{content.market_price}}</text></view>         
+          <view class='count'>
+            <image src='../../images/icon-reducex2.svg' class='count_icon' bindtap='numchangeTap' data-id="{{content.id}}" data-type='0'></image>
+              <text class='nums'>{{count}}</text>
+            <image src='../../images/icon-addx2.svg' class='count_icon'   bindtap='numchangeTap' data-id="{{content.id}}" data-type='1'   ></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='item_total'>小计: <text>¥{{subtotal}}</text> <text class='del' style='float:right' catchtap="del" data-index="{{index}}" data-id="{{content.id}}">删除</text></view>
+     <view wx:if="{{sure}}" class='confirm' bindtap='hideModal'>确定</view>
+    <view wx:else class='confirm' bindtap='next' data-goods_img='{{content.goods_images[0].imgurl}}' data-subtotal='{{content.sale_price}}' data-goods_name='{{content.desc}}' data-id='{{content.id}}'>下一步</view>
+  </view>
+  </block>
+    </view>
+    <view>
+  <template is='logo'>
+  </template>
+</view>
+
+
+

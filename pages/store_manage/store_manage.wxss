@@ -1,0 +1,96 @@
+/* pages/store_manage/store_manage.wxss */
+.container{
+  background: #ebebeb;
+}
+.now_store{
+  padding: 28rpx 32rpx;
+  color: #999999;
+}
+.store_infor{
+  background: #ffffff;
+  padding: 28rpx 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+  width: 100%;
+
+  margin-right:0;
+
+  -webkit-transition: all 0.4s;
+
+  transition: all 0.4s;
+
+  -webkit-transform: translateX(90px);
+
+  transform: translateX(90px);
+
+  margin-left: -90px
+}
+.store_infor image{
+  width:44rpx;
+  height: 44rpx;
+}
+.name{
+font-size: 32rpx;
+color: #333333;
+margin-bottom: 12rpx;
+}
+.create{
+  padding: 22rpx 280rpx;
+  position: fixed;
+  bottom:40rpx;
+  color: #ffffff;
+  background: #0FBA57;
+  border-radius: 12rpx;
+  margin-left:37rpx;
+
+}
+.touch-item {
+
+display: flex;
+
+justify-content: space-between;
+
+
+width: 100%;
+
+overflow: hidden
+
+}
+
+.del {
+
+background-color: orangered;
+
+width: 180rpx;
+
+display: flex;
+
+flex-direction: column;
+height: 148rpx;
+align-items: center;
+
+justify-content: center;
+
+color: #fff;
+
+-webkit-transform: translateX(180rpx);
+
+transform: translateX(180rpx);
+
+-webkit-transition: all 0.4s;
+
+transition: all 0.4s;
+
+}
+
+.touch-move-active .content,
+
+.touch-move-active .del {
+
+-webkit-transform: translateX(0);
+
+transform: translateX(0);
+
+}

@@ -1,0 +1,56 @@
+<import src='../publicTemplate/public.wxml'/>
+<view>
+  <image src='../../images/返回.png' catchtap='back' id='back'></image>
+</view>
+<view wx:if="{{myCart}}">
+  <view><text id='first'>亲，这里还是一片待开采的荒野喔，购物车快饿扁了啦~~</text></view>
+  <view><text id='second'>快给我挑点宝贝吧~</text></view>
+  <button bindtap='buysomething'><label>去逛逛</label></button>
+</view>
+
+     <view class='cart_list' wx:if="{{cartNext}}">
+<block wx:for="{{shopcarData}}"  wx:key='*this'>
+  <view class='cart_item'>  
+    <view class='goods_warp' >
+    <view catchtap='checkedTap' data-index='{{index}}' data-id='{{item.goods_id}}' >
+      <image src='/images/weixuan@2x.svg' hidden='{{checked[index].checked}}'  class='select_icon'></image>
+      <image src='/images/yixuan@2x.svg'  hidden='{{!checked[index].checked}}' class='select_icon'></image>
+    </view>
+      <view class='goods'>
+        <image src='{{base+item.goods_img}}' class='goods_pic'></image>
+        <view class='goods_info'>
+          <view class='goods_name'>{{item.goods_name}}</view>
+          
+          <view class='goods_price'>¥{{item.goods_price}}</view>
+          <view class='count'>
+            <image src='../../images/icon-reducex2.svg' class='count_icon' data-index='{{index}}' data-type='0' bindtap='numchangeTap' data-id="{{item.goods_id}}" ></image>
+              <text class='nums'>{{item.count}}</text>
+            <image src='../../images/icon-addx2.svg' class='count_icon'  data-index='{{index}}' data-type='1'  bindtap='numchangeTap' data-id="{{item.goods_id}}" ></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='item_total'>小计: <text>¥{{item.goods_price*item.count}}</text> <text class='del' style='float:right' catchtap="del" data-index="{{index}}" data-id="{{item.goods_id}}">删除</text></view>
+  </view>
+  </block>
+ 
+  </view>
+  <view class='total_box'>
+    <view class='total_price'>
+      <view class='all_select'>
+        <image src='/images/weixuan@2x.svg' class='select_icon'hidden='{{allsel}}' catchtap='allcheckedTap'></image>
+        <image src='/images/yixuan@2x.svg' class='select_icon'  hidden='{{!allsel}}' catchtap='allcheckedTap'></image>
+        <text>全选</text>
+      </view>
+      <view class='total'>
+        <view class='all_price'><text>合计：</text><text class='price'>¥{{total}}</text></view>
+        <!-- <view class='shipping_fee'>(另需运费¥10.00)</view> -->
+      </view>
+    </view>
+    <view class='save_btn' bindtap='to_createorder'>去结算</view>
+  </view>
+
+   <view style='margin-top:800rpx'>
+    <template is='logo'>
+    </template>
+    </view>

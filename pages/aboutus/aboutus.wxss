@@ -1,0 +1,13 @@
+/* pages/aboutus/aboutus.wxss */
+.container{
+  text-align:center;
+}
+.logo{
+  width: 164rpx;
+  height: 164rpx;
+  background: #EDEDED;
+  border-radius: 30rpx;
+  margin: 194rpx auto 20rpx auto;
+  text-align: center
+}
+

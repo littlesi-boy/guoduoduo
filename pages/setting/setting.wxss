@@ -1,0 +1,66 @@
+/* pages/setting/setting.wxss */
+.container{
+  background-color: #eee;
+}
+.head_line{
+  background-color: #fff;
+  padding:18rpx  32rpx ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 32rpx;
+   position: relative;
+}
+.head_line::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 32rpx;
+  right: 0;
+  height: 1px;
+  background-color: #ebebeb;
+}
+.head_line .name,.phone_manage .phone{
+  display: flex;
+  align-items: center;
+}
+.head_img{
+  height: 92rpx;
+  width: 92rpx;
+  margin-right: 12px;
+  border-radius: 46rpx;
+}
+.head_line .name{
+  color: #333333;
+}
+.head_line .to_edit{
+  color: #999999;
+   display: flex;
+  align-items: center;
+  
+}
+.head_line .to_edit image{
+  height: 44rpx;
+  width: 44rpx;
+  margin-left: 4rpx;
+}
+.manage ,.phone_manage{
+  background-color: #fff;
+  padding:28rpx  32rpx ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 32rpx;
+  line-height: 44rpx;
+}
+.manage image,.phone_manage image{
+  height: 44rpx;
+  width: 44rpx;
+}
+.phone_manage{
+  margin: 20rpx 0 60rpx;
+}
+
+.phone_manage image{
+  margin-left: 2px;
+}

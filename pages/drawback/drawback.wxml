@@ -1,0 +1,29 @@
+<!--pages/drawback/drawback.wxml-->
+<form bindsubmit="formSubmit">
+<view class='container'>
+<view class='choose'>
+  <view>退款退货商品</view>
+   <input placeholder='请填写'bindinput='get_goods' value="{{goods}}"/>
+</view>
+<view class='choose'>
+  <view>退款金额</view>
+ <input placeholder='请填写' bindinput='get_price' value="{{price}}"/>
+</view>
+<textarea placeholder='退款说明' bindinput='get_intriduce' value="{{intriduce}}"></textarea>
+  <view class='store'>
+    <view class='store_title'>上传凭证</view>
+   <view class="pic_box">
+     <block wx:for="{{imgs}}" wx:key="{{index}}">
+        <view class='preview_item'>
+          <image class='close_img' data-index="{{index}}" src='../../images/delectImg.svg'bindtap='del_img'mode='aspectFill'></image>
+          <image src='{{item}}' mode='aspectFill' class='preview_img'></image>
+        </view>
+    </block>  
+    <view class="pic_item" bindtap='selectedImg'>
+      <image src="../../images/tianjia.svg"></image>
+    </view>
+   </view>
+  </view>
+  <button  class="submit"  form-type="submit">提交</button>
+</view>
+  </form>

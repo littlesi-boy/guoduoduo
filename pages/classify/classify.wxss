@@ -1,0 +1,109 @@
+.section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+page{
+  font-size: 26rpx;
+  color: #666;
+  position: relative;
+  width: 100%;
+  height: 100%
+}
+.left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 90px;
+  background: linear-gradient(to bottom,rgb(164, 164, 241),rgb(0, 87, 128));
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.left::before {
+  content: "";
+  position: absolute;
+  background: #dcdcdc;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-right: 1rpx solid #dcdcdc;
+}
+
+.left view.active {
+  background: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.left view {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.right {
+  margin-left: 180rpx;
+  height: 100%;
+  overflow: hidden;
+  width: auto;
+  background: rgba(250, 86, 127,0.1);
+}
+
+.right text {
+  font-size: 22rpx;
+}
+
+.typeTree {
+  padding: 10rpx 30rpx;
+  width: 100%;
+  font-size: 22rpx;
+}
+
+.typeTree .item {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 14%;
+}
+.typeTree>.brand{
+  margin-bottom: 10rpx;
+  margin-top: 10rpx
+}
+.typeTree .brand, .typeTree .category {
+  flex-wrap: wrap;
+  overflow: hidden;
+  display: inline-block;
+  width: 40%;
+}
+
+.typeTree .title {
+  padding: 10px 0;
+  display: block;
+  color: #333;
+}
+
+.typeTree image {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.typeTree .brand image {
+  height: 200rpx;
+}
+
+.typeTree .category image {
+  height: 170rpx;
+}
+
+.typeTree .category {
+  padding-bottom: 20rpx;
+}
+
+.item text {
+  padding-bottom: 20rpx;
+  display: block;
+}

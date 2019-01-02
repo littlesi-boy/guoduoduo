@@ -1,0 +1,6 @@
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "当季热卖",
+  "enablePullDownRefresh": true
+}

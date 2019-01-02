@@ -1,0 +1,6 @@
+/* image{
+  width: 200rpx;
+  position: absolute;
+  bottom: 15rpx;
+  left: (50%-100)rpx;
+} */

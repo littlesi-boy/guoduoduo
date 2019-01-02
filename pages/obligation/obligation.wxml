@@ -1,0 +1,72 @@
+<!--pages/obligation/obligation.wxml-->
+<view class='container'>
+<image src='/images/ob.png' class='beijing'>
+  <view class='wait'>
+    <view style='font-size:32rpx;'>等待付款</view>
+    <view class='odd'>剩14分20秒自动关闭</view>
+  </view>
+</image>
+  <view class="addr">
+   <view class='addr_logo'>
+    <image src='/images/addr.svg'></image>
+    <view>鲜果小店</view>
+  </view>
+  <view class='name'>小树林<text>18892682991</text></view>
+  <view class='name'>浙江省杭州市滨江区龙威大厦1001</view>
+  </view>
+    <view class='goods'>
+    <view class="baoguo">包裹1</view>
+    <view class='goods_num'>
+      <image src='/images/Group12@2x.png' class='ware'></image>
+      <image src='/images/Group12@2x.png' class='ware'></image>
+      <image src='/images/Group12@2x.png' class='ware'></image>
+      <image src='/images/Group12@2x.png'class='ware'></image>
+      <view>共5件</view>
+       <image src='/images/tiaozhuan2.svg' class='icon_right'></image>
+    </view>
+      <view class='yunfei'>
+      <view>运费</view>
+      <view>免邮</view>
+    </view>
+    <view class='youhuiquan'>
+      <view>优惠券</view>
+      <view>无</view>
+    </view>
+    <view class='heji'>
+      <view>合计</view>
+      <view class='price'>¥566.50</view>
+    </view>
+  </view>
+  <view class='order_time'>
+  <view class='bianhao'>订单编号：76032426442345</view>
+  <view>下单时间：2018-04-23 12:23:45</view>
+  </view>
+  <view class='order_state'>
+   <view class='cancel_order' bindtap='to_cancelorder'>取消订单</view>
+   <view class='pay'>立即付款</view>
+  </view>
+
+
+
+  <view class='zhezhao'></view>
+  <view class="reason">
+    <view class='choose_reason'>请选择取消原因</view>
+    <view class='chance'>
+      <image src='/images/weixuan@2x.svg'></image>
+      <view>不想要了</view>
+    </view>
+     <view class='chance'>
+      <image src='/images/weixuan@2x.svg'></image>
+      <view>无法签收</view>
+    </view>
+     <view class='chance'>
+      <image src='/images/weixuan@2x.svg'></image>
+      <view>重复购买</view>
+    </view>
+     <view class='chance'>
+      <image src='/images/weixuan@2x.svg'></image>
+      <view>其他</view>
+    </view>
+    <view class='sub'>提交</view>
+  </view>
+</view>

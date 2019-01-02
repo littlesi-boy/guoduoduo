@@ -1,0 +1,5 @@
+<!--pages/auditing/auditing.wxml-->
+<view class='container'>
+<image src='/images/daishenhe.svg'></image>
+<view class='auditing'>待审核</view>
+</view>

@@ -1,0 +1,6 @@
+<!--pages/success/success.wxml-->
+<view class='container'>
+<image src='/images/Group3@2x.png' class='success'></image>
+<view class='done'>支付完成</view>
+<view class='detail' bindtap='to_orderdetail'>查看订单详情</view>
+</view>

@@ -1,0 +1,28 @@
+.page-body{
+  width: 600rpx;
+  height: 350rpx;
+  background-color: #eee;
+  border: 2px double pink;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 10rpx;
+  margin: 0 auto
+}
+.infoNick{
+   height: 70rpx;
+  margin-left: 40rpx;
+  color: #777;
+    float: left;
+    width: 240rpx;
+    background-color: #eee;
+}
+.container{
+  margin: 0 auto;
+  margin-top: 200rpx;
+}
+.animation-element{
+    width: 90%;
+    height: 85%;
+    border: 3rpx solid pink;
+    padding: 10rpx;
+}

@@ -1,0 +1,27 @@
+/* pages/trade/trade.wxss */
+.expend{
+  height:128rpx;
+  padding: 20rpx 32rpx;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ border-bottom: 2rpx solid #ebebeb;
+ margin-bottom: 20rpx;
+}
+.pay_text{
+  color: #000000;
+}
+.pay_time{
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 12rpx;
+}
+.pay_num{
+  font-size:36rpx;
+  color: #333333;
+}
+.nomessage{
+  text-align: center;
+  margin-top: 120rpx;
+}

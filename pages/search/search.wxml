@@ -1,0 +1,47 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <view class="search_head">
+    <view class="search">
+      <image src="/images/search.svg"></image>
+      <input placeholder="西瓜/榴莲/哈密瓜/牛油果" focus value="{{value}}" bindchange='get_search'/>
+    </view>  
+    <view bindtap='back'>取消</view>
+  </view>
+   <view class='search_all' wx:if="{{!has_serach}}">
+    <view class="history">
+      <view class="history_title">历史搜索</view>
+        <view class='history_all'>
+          <block wx:for="{{history_list}}" wx:key="{{index}}">
+            <view class='history_search' data-value="{{item.keywords}}" bindtap='to_search'>{{item.keywords}}</view>
+          </block> 
+        </view>
+      </view>
+      <view class="history">
+        <view class="history_title">热门搜索</view>
+          <view class='history_all'>
+             <block wx:for="{{hot_list}}" wx:key="{{index}}">
+            <view class='history_search' data-value="{{item.keywords}}" bindtap='to_search'>{{item.keywords}}</view>
+          </block>
+        </view>
+      </view>
+  </view> 
+     <view class='main' wx:else>
+     <block wx:for="{{list}}" wx:key="{{index}}" >
+      <view class='main_list' bindtap='to_detail'  data-id='{{item.id}}'>
+        <image src='{{imgbase+item.goods_image}}'><view class='sale'>特价</view></image>
+        <view class='list_right'>
+            <view class='name'>{{item.goods_name}}</view>
+            <view class='num'>{{item.specification_detail}}</view>
+            <view class='price'>
+             <view wx:if="{{item.special_price==0}}">¥{{item.original_price}}/{{item.specification}}</view>
+          <view wx:else>¥{{item.special_price}}/{{item.specification}}</view>
+              <image src='/images/add.svg'></image>
+            </view>
+        </view>
+      </view> 
+
+    </block> 
+   
+  </view>
+</view>
+

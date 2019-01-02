@@ -1,0 +1,10 @@
+/* pages/auditing/auditing.wxss */
+.container{
+  text-align: center;
+}
+.auditing{
+  color: #ccc;
+  font-size: 40rpx;
+  margin-top: 20px;
+
+}

@@ -1,0 +1,35 @@
+<!--pages/recharge/recharge.wxml-->
+<view class='container'>
+  <scroll-view scroll-x="true" class="classfy">
+
+    <image src='/images/Group14Copy@2x.png' class='classfy_item' bindtap='to_choose' data-money="{{list[0].reach_money}}" 
+    data-id="{{list[0].id}}">
+      <view class='price'>¥{{list[0].reach_money}}</view>
+      <view class='send_price'>送{{list[0].send_money}}</view>
+      <view class='charge_card'>充值卡</view>
+      <image src='/images/choose.svg' class='active' wx:if='{{list[0].reach_money==currentId}}'></image>
+    </image>
+        <image src='/images/lan.png' class='classfy_item' bindtap='to_choose' data-money="{{list[1].reach_money}}"
+        data-id="{{list[1].id}}">
+      <view class='price'>¥{{list[1].reach_money}}</view>
+      <view class='send_price' style="color:blue">送{{list[1].send_money}}</view>
+      <view class='charge_card'>充值卡</view>
+       <image src='/images/choose.svg' class='active' wx:if='{{list[1].reach_money==currentId}}'></image>
+    </image>
+        <image src='/images/cheng.png' class='classfy_item' bindtap='to_choose' data-money="{{list[2].reach_money}}"
+        data-id="{{list[2].id}}">
+      <view class='price'>¥{{list[2].reach_money}}</view>
+      <view class='send_price' style="color:orange">送{{list[2].send_money}}</view>
+      <view class='charge_card'>充值卡</view>
+       <image src='/images/choose.svg' class='active' wx:if='{{list[2].reach_money==currentId}}'></image>
+    </image>
+
+  </scroll-view>
+  <view class='main'>
+    <view class='title'>充值卡购卡说明</view>
+    <view class='intriduce'>1.充值面值：500元、1000元、2000元、3000元、5000元；</view>
+    <view class='intriduce'>2.使用方法：此充值在果小小商城消费视同于现金结算，在结算时选</view>
+    <view class='pay_price' bindtap='to_pay'>支付{{pay_money}}元</view>
+  </view>
+
+</view>

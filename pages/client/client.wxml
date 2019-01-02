@@ -1,0 +1,28 @@
+<view class='container'>
+   <view class='row'>
+        <view class='info'>
+               <input  type='text' focus='{{fus}}' class= 'info-input' bindinput="handleName" placeholder="请输入您的姓名" bindfocus='clear'/>
+         </view>
+ </view>
+  <view class='row'>
+        <view class='info'>
+               <input  class= 'info-input1' bindinput="handleInputPhone" placeholder="请输入你的手机号" bindfocus='clear' />
+         </view>
+</view>
+
+   <view class='name info row'>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker">
+    选择省市区：{{region[0]+'-'}}{{region[1]+'-'}}{{region[2]}}
+    </view>
+  </picker>
+      </view>
+       <view class='row'>
+        <view class='info'>
+               <textarea class= 'info-input1' bindinput="handleInputAddr" style='height:130rpx;font-size:20rpx' style='padding-bottom:8rpx' placeholder="请输入你的详细地址(高层小区等尽可能详细至门牌号单元楼)" bindfocus='clear'></textarea>
+         </view>
+</view>
+ <button class='submit' bindtap='submit'>提交</button>
+  <view class='cheer' wx:if='{{shows}}'><icon type="success" size="24"/> 添加成功!</view>
+ <button type = "default" class = 'return' bindtap='return_home'>返回首页</button>
+ </view>

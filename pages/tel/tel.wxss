@@ -1,0 +1,33 @@
+/* pages/tel/tel.wxss */
+.container{
+  padding-left: 32rpx;
+}
+.tel,.code{
+  padding: 28rpx 32rpx 28rpx 0;
+  font-size: 32rpx;
+  color: #999999;
+  border-bottom: 2rpx solid #ebebeb;
+}
+.code{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  .binding{
+   padding: 24rpx 310rpx;
+   font-size: 32rpx;
+   color: #FFFFFF;
+   background: #0FBA57;
+   border-radius: 12rpx;
+   margin-top: 40rpx;
+   margin-right:34rpx;
+  } 
+  .agree{
+    font-size:24rpx;
+    display: flex;
+    align-items: center;
+    margin-top: 20rpx;
+  }
+  .protocol{
+    color: #0FBA57;
+  }

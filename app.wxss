@@ -1,0 +1,13 @@
+/**app.wxss**/
+@import './weui.wxss';
+page {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box；
+  
+}
+body,html{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}

@@ -1,0 +1,18 @@
+<!--pages/store_manage/store_manage.wxml-->
+<view class='container'>
+  <view class='now_store'>当前门店</view>
+   <block wx:for="{{list}}" wx:key="{{index}}" wx:for-item="item" wx:for-index="index">
+      <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" >
+        <view class='store_infor'  bindtap='create' data-item="{{item}}"  >
+          <view class='store_name'>
+            <view class='name'>{{item.shop_name}}</view>
+            <view>{{item.address_detail}}</view>
+          </view>
+          <image src='/images/tiaozhuan2.svg'></image>
+        </view>
+        <view class="del" catchtap="del" data-index="{{index}}" data-id="{{item.id}}">删除</view>
+      </view>
+
+   </block>
+  <!-- <view class='create' bindtap='add_store'>新建门店</view> -->
+</view>

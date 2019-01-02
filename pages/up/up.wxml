@@ -1,0 +1,12 @@
+<!--pages/up/up.wxml-->
+<view class='container'>
+  <view class='tel'>
+    <view class='now'>当前手机号</view>
+    <view>{{content.telephone}}</view>
+  </view>
+  <view class='tel'>
+    <view class='now'>中国大陆+86</view>
+    <input placeholder='请输入手机号' type='number' bindinput='getphone'></input>
+  </view>
+  <view class="step" bindtap='to_code'>下一步</view>
+</view>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-减 22*22@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon-减-22*22" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-16" x="0" y="0" width="22" height="22"></rect>
+        <path d="M11,21.5 C16.7989899,21.5 21.5,16.7989899 21.5,11 C21.5,5.20101013 16.7989899,0.5 11,0.5 C5.20101013,0.5 0.5,5.20101013 0.5,11 C0.5,16.7989899 5.20101013,21.5 11,21.5 Z M11,22 C4.92486775,22 0,17.0751322 0,11 C0,4.92486775 4.92486775,0 11,0 C17.0751322,0 22,4.92486775 22,11 C22,17.0751322 17.0751322,22 11,22 Z" id="Oval-11" fill="#CCCCCC" fill-rule="nonzero"></path>
+        <g id="Group" transform="translate(5.000000, 10.000000)" fill="#0FBA57" fill-rule="nonzero">
+            <g id="Group-2">
+                <path d="M1.67857143,1.75 C1.26435787,1.75 0.928571429,1.41421356 0.928571429,1 C0.928571429,0.585786438 1.26435787,0.25 1.67857143,0.25 L10.3214286,0.25 C10.7356421,0.25 11.0714286,0.585786438 11.0714286,1 C11.0714286,1.41421356 10.7356421,1.75 10.3214286,1.75 L1.67857143,1.75 Z" id="Line-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

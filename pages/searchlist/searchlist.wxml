@@ -1,0 +1,23 @@
+<!--pages/searchlist/searchlist.wxml-->
+<view class="container">
+  <view class="search_head">
+    <view class="search">
+      <image src="/images/search.svg"></image>
+      <input placeholder="西瓜/榴莲/哈密瓜/牛油果" focus value="{{value}}" bindchange='get_search'/>
+    </view>  
+    <view>取消</view>
+  </view>
+  <view class='main'>
+  <view class='main_list'>
+    <image src='/images/Group12@2x.png'><view class='sale'>特价</view></image>
+    <view class='list_right'>
+        <view class='name'>新西兰佳沛绿心奇异果</view>
+        <view class='num'>6粒装 120g左右</view>
+        <view class='price'>
+          <view>¥39.90/盒<text class='cost'>¥59.90</text></view>
+          <image src='/images/add.svg'></image>
+        </view>
+    </view>
+  </view>
+</view>
+</view>

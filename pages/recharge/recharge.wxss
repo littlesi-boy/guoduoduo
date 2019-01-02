@@ -1,0 +1,73 @@
+/* pages/recharge/recharge.wxss */
+
+.classfy{
+  width:100%;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 16rpx 0 16rpx 32rpx;
+  overflow: hidden;
+  height: 450rpx;
+}
+.classfy_item{
+   width: 560rpx;
+  height: 360rpx;
+  display: inline-block;
+  margin-right: 20rpx;
+  padding: 8rpx 20rpx;
+  position: relative;
+}
+.price{
+font-size: 100rpx;
+color: #FFFFFF;
+position: absolute;
+left:64rpx;
+top:48rpx;
+}
+.send_price{
+  padding: 8rpx 40rpx;
+  background: #ffffff;
+ font-size: 28rpx;
+color: #2ACA50;
+position: absolute;
+left:64rpx;
+top:220rpx;
+border-radius: 4rpx;
+}
+.charge_card{
+font-size: 32rpx;
+color: #FFFFFF;
+position: absolute;
+bottom: 60rpx;
+right: 60rpx;
+}
+.main{
+
+  padding: 0 80rpx;
+ margin-bottom: 80rpx;
+ 
+}
+.title{
+   text-align: center;
+     margin-top: 80rpx;
+}
+.pay_price{
+  padding: 22rpx 184rpx;
+  font-size: 32rpx;
+  color: #FFFFFF;
+  background: #0FBA57;
+  box-shadow: 0 8rpx 16rpx 0 rgba(15,186,87,0.29);
+  border-radius: 200rpx;
+  margin-top: 240rpx;
+  text-align: center;
+  }
+  .intriduce{
+    color: #999999;
+    margin-top: 28rpx;
+  }
+  .active{
+   width: 40rpx;
+   height: 40rpx;
+   position: absolute;
+   right: 22rpx;
+   top: 0rpx;
+  }

@@ -1,0 +1,105 @@
+<import src="/wxSearch/wxSearch.wxml" />
+<import src='../publicTemplate/public.wxml' />
+<wxs module="filters" src="../filter/filter.wxs"></wxs>
+<wxs module="filters1" src="../filter/filter.wxs"></wxs>
+<template is="wxSearch" data="{{wxSearchData}}" />
+
+<view class="page-section page-section-spacing swiper">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+    <block wx:for="{{imgUrls}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item.url}}" class="slide-image" style='height:100%' bindtap='pursess' data-id='{{item.id}}'/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view id='service' bindtap='serviceLink'>
+   <image src='/images/icon_客服.png'></image>
+</view>
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box" bindtap='to_search'>
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input" placeholder="搜索新鲜水果" value="{{wxSearchData.value}}" bindfocus="wxSerchFocus" bindinput="wxSearchInput" bindblur="wxSearchBlur" />
+      <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+        <icon type="clear" size="14"></icon>
+      </view>
+    </view>
+  </view>
+</view>
+<view>
+<template is="wxSearch" data="{{wxSearchData}}" />
+</view>
+
+
+<view id='banner'>
+  <block wx:for="{{fruitUrls}}" wx:key="*this">
+
+    <image src='{{item.icon}}' class='bar-fruits'/>
+    <view id='index-des'  bindtap='skip' data-id='{{item.id}}'>
+      <text>{{item.title}}</text>
+    </view>
+  
+  </block>
+</view>
+<view class='example'>
+  <view id="tip" class="marquee_box">
+    <text style='font-style:oblique;font-family:"幼圆"'>小小水果、每天新鲜喔</text>
+    <view class="marquee_text" animation='{{animationData}}' style="{{orientation}}:{{marqueeDistance}}px;font-size: {{size}}px;">
+      <text id='tip-des' style='position: absolute; left: 40%; top: 20rpx;border-radius:6rpx'>{{text}}</text>
+    </view>
+  </view>
+</view>
+
+<view class='car'>
+  <block>
+    <image src='../../images/购物.png' bindtap='nagvite' />
+  </block>
+</view>
+<view class='discounts'>
+  <block wx:for="{{discounts}}" wx:key="*this">
+    <image src='{{item.url}}' catchtap='touchSingle' data-tip='{{item.id}}' />
+  </block>
+</view>
+<view id='gridFather'>
+  <image src='{{cube[0].img}}' id='displayFruitsTop' catchtap='firstI' data-id='{{cube[0].goods_id}}'></image>
+</view>
+<view id='displayFather'>
+  <image src='{{cube[1].img}}' class='displayFruitsBottom' catchtap='secondI' data-id='{{cube[1].goods_id}}'></image>
+  <image src='{{cube[2].img}}' class='displayFruitsBottom' catchtap='thirdI' data-id='{{cube[2].goods_id}}'></image>
+</view>
+
+<view class="weui-panel">
+  <block wx:for="{{arrayList}}" wx:key='{{index}}'>
+    <image src="{{item.main_img}}" id='imageList' bindtap="pursess" data-id='{{item.id}}'></image>
+    <view class='list_right' bindtap="pursess" data-id='{{item.id}}'>
+      <view class='name' style='height:140rpx'>
+        <text id='first-child' style='color:#666'>立减{{item.market_price-item.sale_price}}元</text>
+        <text style='display:inline-block;font-family:"隶书";margin-left:2%;margin-top:15rpx;font-weight:bold;font-size:25rpx'>{{item.name}}</text> </view>
+      <view class='num'>
+        <progress style='margin-left:40rpx;width:70%' percent="{{per}}" stroke-width='9' activeColor='skyblue' border-radius='10rpx' />
+        <text style='position:absolute;top:20rpx;left:10rpx'>已抢购{{percent}}件</text>
+        <text id='store'>库存:{{item.stock}} 件 </text>
+      </view>
+      <view>
+        <text style='font-size:22rpx;color:#666'>{{filters1.toFix1(item.desc)}}</text>
+      </view>
+      <view id='purseNow'  bindtap="pursess" data-id="{{item.id}}">
+        <text wx:if='judge'>立即抢购</text>
+        <text wx:else >即将开抢</text>
+      </view>
+      <view class='price' style='position:absolute;bottom:-10rpx'>
+        <view class='pricechild'>售价:¥{{item.market_price}}/份
+          <text style='text-decoration:line-through;color:#bbb;font-size:0.5rem'>￥{{filters.toFix(item.market_price-item.market_price*0.15)}}</text> </view>
+        <view class='pricechild'>会员价:¥{{item.sale_price}}/份</view>
+        <!-- <view class='cart_num' wx:if="{{!item.goods_count}}">0</view>
+            <view class='cart_num' wx:else>{{item.goods_count}}</view> -->
+      </view>
+    </view>
+  </block>
+
+</view>
+<view>
+  <template is='logo'>
+  </template>
+</view>

@@ -1,0 +1,125 @@
+<!--pages/createorder/createorder.wxml-->
+
+
+<view class='container'>
+ <view class='addr_name' style='display:inline-block'>
+      <view>
+       <image src='/images/addr.svg' style='margin-left:10rpx'></image>
+       收货地址：<text style='color:#666;font-size:26rpx'>{{currentArress? currentArress :adds}}</text>
+      </view>
+      收货人：<text class='name'>{{userInfo.nickName}}</text>
+    </view>
+<view style='display:inline-block;position:relative;top:11rpx'> 
+      <button id='edit' bindtap='editNow'>修改?</button>
+  </view>
+  </view>
+<block wx:for='{{goods}}' wx:key='*this'>
+  <view class='goods'>
+    <view class='goods_num'>
+   <image src='{{(base+item.goods_img)}}' style='height:100rpx;width:100rpx'></image>
+   <image src='{{item.goods_img}}' style='height:100rpx;width:100rpx'></image>
+    <image src='/images/tiaozhuan2.svg' class='icon_right'></image>
+    <text>{{item.goods_name}}</text>
+    </view>
+    <view class='goods_jine'>
+      <view>商品总金额</view>
+      <view>¥{{item.subtotal*item.count}}</view>
+    </view>
+  </view>
+  <view class='all'>
+    <view class='yunfei'>
+      <view>运费</view>
+      <view wx:if="{{item.subtotal}}">
+      <view>免邮</view>
+      </view>
+    
+    </view>
+  </view>
+   
+     <view class='yunfei' data-money="{{item.subtotal}}" bindtap='to_coupon'>
+      <view style='margin-left:30rpx'>优惠券</view>
+      <view class='youhuiquan'>
+      <view wx:if="{{limit_money > 0}}">
+        <view>{{limit_money}}</view>
+        </view>
+        <view wx:else class='youhuiquan'>
+         <view>请选择</view>
+           <image src='/images/tiaozhuan2.svg' class='icon_right'></image>
+        </view>
+      </view>
+    </view>
+     <view class='yunfei'>
+      <view style='margin-left:30rpx'>合计</view>
+      <block wx:if="{{limit_money > 0}}">
+      <view wx:if="{{goodsTotal}}">
+      <view>￥{{goodsTotal}}</view>
+      </view>
+      <view wx:else>
+      <view>￥{{goodsTotal}}</view>
+      </view>
+      </block>
+      <block wx:else>
+      <view wx:if="{{goodsTotal>send_fee}}">
+      <view>￥{{goodsTotal}}</view>
+      </view>
+      <view wx:else>
+      <view>￥{{goodsTotal}}</view>
+      </view>
+      </block>
+    </view>
+  
+  <view class='remark'>
+    <view>备注</view>
+    <input placeholder='请输入备注信息' bindinput='to_remark'></input>
+  </view>
+
+
+  <view class='sub_order'>
+  <block wx:if="{{limit_money > 0}}">
+    <block wx:if="{{goodsTotal}}">
+    <view  class='total'>合计:<text style='font-size: 32rpx;color: #FF5C38;'>￥{{goodsTotal}}</text></view>
+    </block>
+     <block wx:else>
+       <view  class='total'>合计:<text style='font-size: 32rpx;color: #FF5C38;'>￥{{goodsTotal}}</text></view>
+      </block>
+      </block>
+       <block wx:else>
+       <block wx:if="{{goodsTotal>send_fee}}">
+    <view  class='total'>合计:<text style='font-size: 32rpx;color: #FF5C38;'>￥{{goodsTotal}}</text></view>
+    </block>
+     <block wx:else>
+       <view  class='total'>合计:<text style='font-size: 32rpx;color: #FF5C38;'>￥{{goodsTotal}}</text></view>
+      </block>
+       </block>
+    <view class='sub_bot'  bindtap="show_write">提交订单</view>
+  </view>
+
+  <!-- <view class="write" wx:if="{{showBox}}" >
+    <view class="write_title">
+      <view>订单支付</view>
+      <image src="/images/close.svg"  bindtap="close"></image>
+    </view>
+      <block wx:if="{{limit_money > 0}}">
+      <view wx:if="{{goodsTotal>send_fee}}">
+      <view class='pay_total'>￥{{goodsTotal}}</view>
+      </view>
+      <view wx:else>
+      <view class='pay_total'>￥{{send_fee+goodsTotal}}</view>
+      </view>
+      </block>
+      <block wx:else>
+      <view wx:if="{{goodsTotal>send_fee}}">
+      <view class='pay_total'>￥{{goodsTotal}}</view>
+      </view>
+      <view wx:else>
+      <view  class='pay_total'>￥{{send_fee+goodsTotal}}</view>
+      </view>
+      </block>
+    <view class="pay">
+      <view>付款方式</view>
+      <view>余额</view>
+    </view>
+    <view class='sub_pay'  bindtap='pay' data-ordernum="{item.count}}" data-shopid="{{item.goods_id}}">立即支付</view>
+  </view> -->
+  </block>
+ 

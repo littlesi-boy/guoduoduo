@@ -1,0 +1,23 @@
+/* pages/edit/edit.wxss */
+.container{
+  padding-left: 52rpx;
+}
+.item{
+  padding:52rpx 32rpx 052rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #ebebeb;
+}
+.item image{
+  width: 92rpx;
+  height: 92rpx;
+}
+.choose{
+  display: flex;
+  align-items: center;
+}
+.choose image{
+  width: 44rpx;
+  height: 44rpx;
+}

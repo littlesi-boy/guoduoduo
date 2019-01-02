@@ -1,0 +1,41 @@
+<!--pages/afterdetail/afterdetail.wxml-->
+<view class='container'>
+<image src='/images/ob.png' class='beijing'>
+  <view class='wait1' wx:if="{{content.status==5 || content.status==7}}">
+  <view>退款中</view>
+  <view>24小时内退款</view>
+  </view>
+  <view class='wait1'wx:if="{{content.status==6 || content.status==8}}">
+    <view>退款成功</view>
+    <view>{{content.time}}</view>
+  </view>
+</image>
+
+  <view class='cancel_price'>
+    <view>退款总金额</view>
+    <view style='color: #FF4300;' wx:if="{{content.status==5||content.status==6}}">¥{{content.order_total_price}}</view>
+    <view style='color: #FF4300;' wx:else>¥{{content.refund_money}}</view>
+  </view>
+    <view class='goods'>
+    <view class="tuikuan">退款信息</view>
+    <view class='goods_num'  bindtap='to_goodsdetail'>
+      <block wx:for="{{content.goods_image}}" wx:key="{{p_index}}" wx:for-item="p_item" wx:for-index="p_index">
+      <image src='{{imgbase+p_item}}' class='ware'></image>
+      </block>
+      <view>共{{content.goods_count}}件</view>
+       <image src='/images/tiaozhuan2.svg' class='icon_right'></image>
+    </view>
+    <view class='heji'>
+      <view>共{{content.goods_count}}类商品</view>
+      <view>实付：¥{{content.order_total_price}}</view>
+    </view>
+  </view>
+  <view class='order_time'  >
+   <view class='cancel_reason' wx:if="{{content.status==7||content.status==8}}" >退款原因：{{content.introduce}}</view>
+   <view class='cancel_reason'wx:if="{{content.status==5||content.status==6}}">退款金额：¥{{content.order_total_price}}</view>
+     <view class='cancel_reason'wx:else>退款金额：¥{{content.refund_money}}</view>
+  <view class='cancel_reason'>申请时间：{{content.time}}</view>
+  <view class='bianhao'>订单编号：{{content.order_num}}</view>
+  </view>
+
+    </view>

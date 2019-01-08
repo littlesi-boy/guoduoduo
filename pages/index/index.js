@@ -181,14 +181,7 @@ Page({
     var that = this   
     wx.getSetting({
       success: function (res) {
-        // if (!res.authSetting['scope.userLocation']) {
-        //   wx.authorize({
-        //     scope: 'scope.userLocation',
-        //     success() {
-        //       wx.getLocation()
-        //     }
-        //   })
-        // }
+       
         if (!res.authSetting['scope.userInfo']) {
           wx.authorize({
             scope: 'scope.userInfo',
@@ -237,7 +230,6 @@ Page({
       
       success:res=>{
         if(res.statusCode==200){
-          // let banner = 'fruitUrls[' + res.data.data.link_id+'].url'
           that.setData({
             cube:res.data.data.list
           })
@@ -245,51 +237,7 @@ Page({
         return -1;
       }
     })
-    //判读审核是否通过
-    // wx.request({
-    //   url: app.globalData.baseUrl + '/api/my/userinfo',
-    //   method: "POST",
-    //   data: {
-    //     id: wx.getStorageSync("uid"),
-    //   },
-    //   success: function (res) {
-    //     console.log(res)
-    //     if (res.data.data.is_pass == 0) {
-    //       wx.navigateTo({
-    //         url: '/pages/auditing/auditing'
-    //       })
-    //       console.log(222)
-    //     }
-    //   }
-    // })
-  //   wx.request({
-  //     url: app.globalData.baseUrl + '/api/index/coupon_putawary',
-  //     method: "POST",
-  //     data: {
-  //       id: wx.getStorageSync("uid"),
-  //     },
-  //     success: function (res) {
-  //       console.log(res)
-  //       that.setData({ coupon_putawary: res.data.data })
-  //       var coupon_putawary = that.data.coupon_putawary
-  //       if (that.data.coupon_putawary) {
-  //         that.setData({ showBox: true })
-  //         that.setData({ showMask: true })
-  //       } else {
-  //         that.setData({ showBox: false })
-  //         that.setData({ showMask: false })
-  //       }
-
-  //     }
-  //   })
-
-  //   this.onPullDownRefresh()
-  // },
-  // to_detail: function (event) {
-  //   var id = event.currentTarget.dataset.id;
-  //   wx.navigateTo({
-  //     url: "/pages/detail/detail?id=" + id
-  //   })
+  
   },
  
   to_search: function (event) {

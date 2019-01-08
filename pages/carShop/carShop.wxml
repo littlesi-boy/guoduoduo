@@ -1,6 +1,6 @@
 <import src='../publicTemplate/public.wxml'/>
 <view>
-  <image src='../../images/返回.png' catchtap='back' id='back'></image>
+  <image src='../../images/back.png' catchtap='back' id='back'></image>
 </view>
 <view wx:if="{{myCart}}">
   <view><text id='first'>亲，这里还是一片待开采的荒野喔，购物车快饿扁了啦~~</text></view>

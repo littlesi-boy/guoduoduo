@@ -1,10 +1,8 @@
-// pages/addr/addr.js
+
 const app = getApp()
 Page({
 
-  /**
-   * 页面的初始数据
-   */
+
   data: {
     custName: '',
     region: ['', '', ''],

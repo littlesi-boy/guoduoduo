@@ -1,4 +1,4 @@
-// pages/createorder/createorder.js
+
 const app = getApp()
 Page({
 
@@ -91,10 +91,7 @@ Page({
           token: wx.getStorageSync("token")
         })
         if(res.statusCode==200){
-        // that.setData({ order_num: res.data.data.count})
-        // that.setData({ shop_id: res.data.data.id })
-          // that.setData({ showBox: true })
-          // that.setData({ showMask: true })
+       
           wx.setStorageSync('order_id', res.data.order_id)
           that.getPreOrder(that.data.token, res.data.order_id)
 
@@ -222,50 +219,7 @@ Page({
     })
   },
 
-  // pay: function (e) {
-  //   var that=this
-  //   var order_num = e.currentTarget.dataset.ordernum;
-  //   var shop_id = e.currentTarget.dataset.shopid; 
-  //   var consignee_id = wx.getStorageSync('consignee_id')
-  //   wx.showModal({
-  //     title: '提示',
-  //     content: '是否支付',
-  //     success: function (res) {
-  //       if (res.confirm) {
-  //         wx.request({
-  //           url: app.globalData.baseUrl + '/pay/pre_order',
-  //           method: "POST",
-  //           data: {
-  //             products: that.data.goods,
-  //             consignee_id: consignee_id
-  //           },
-  //           success: function (res) {
-  //             // console.log(res)
-  //             if (res.statusCode==200) {
-  //               wx.setStorageSync('order_id', res.data.order_id)
-  //               that.getPreOrder(token, res.data.order_id)
-  //               wx.navigateTo({
-  //                 url: "/pages/success/success"
-  //               })
-  //             }
-  //             else  {
-  //               wx.showModal({
-  //                 title: '提示',
-  //                 content: '服务器异常',
-  //               })
-  //             }
-  //           }
-  //         })
-  //       } else if (res.cancel) {
-  //         console.log('用户点击取消')
-  //         wx.showModal({
-  //           title: '提示',
-  //           content: '取消订单成功..!',
-  //         })
-  //       }
-  //     }
-  //   })
-  // },
+ 
 to_addr:function(event){
     wx.navigateTo({
       url: "/pages/addr/addr"
@@ -302,13 +256,7 @@ to_addr:function(event){
    */
   onLoad: function (options) {
     var that = this
-    // wx.getLocation({
-    //   type: 'gcj02',
-    //   success(res) {
-    //     const latitude = res.latitude
-    //     const longitude = res.longitude
-    //   }
-    // })
+    
 
     wx.request({
       url: getApp().globalData.baseUrl + '/consignee/get',

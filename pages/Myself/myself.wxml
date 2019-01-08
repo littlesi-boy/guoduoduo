@@ -7,18 +7,18 @@
     <image class='child' src='{{userInfo.avatarUrl}}' style='width:70rpx;height:70rpx;z-index:2000'></image>
     <view style='font-size:26rpx;font-weight:bold;color:#333;margin-top:-20rpx'>
       <text id='curretName'>{{userInfo.nickName}}</text>
-      <image src='/images/编辑.png' style='width:58rpx;height:51rpx;margin-left:10rpx' bindtap='linkEdit' id='nickEdit'></image>
+      <image src='/images/editss.png' style='width:58rpx;height:51rpx;margin-left:10rpx' bindtap='linkEdit' id='nickEdit'></image>
     </view>
   </view>
 </view>
 <view id='navbar'>
   <text style='font-size:29rpx'>登录手机号，查看全渠道订单与优惠券</text>
-  <image src='../../images/注册登录.png' bindtap='signin'></image>
+  <image src='../../images/regis.png' bindtap='signin'></image>
 </view>
 <view class='order_box'>
   <view class='title' bindtap='nav_to' data-url='/pages/order/order?type=999'>
     <text id='first-child'>我的订单</text>
-    <text id='last-child'>查看全部订单 <image src='../../images/右箭头.png' id='arrow'></image> </text>
+    <text id='last-child'>查看全部订单 <image src='../../images/rightArrow.png' id='arrow'></image> </text>
     <image src='../../images/tiaozhuan2.svg'></image>
   </view>
   <view class='status_list'>
@@ -52,9 +52,9 @@
 </view>
 <view id='Mybody'>
   <view class='title' bindtap='swip_to' data-url='/pages/carShop/carShop'>
-    <image src='/images/购物车.png' class='icons'  style='width:40rpx;height:40rpx;'></image>
+    <image src='/images/shopCars.png' class='icons'  style='width:40rpx;height:40rpx;'></image>
     <text>购物车</text>
-    <image src='../../images/右箭头.png' id='arrow'></image>
+    <image src='../../images/rightArrow.png' id='arrow'></image>
   </view>
 
   <!-- <view class='title' bindtap='nav_to' data-url='/pages/superClient/superClient?type=999'>
@@ -64,31 +64,31 @@
   </view> -->
 
   <view class='title' bindtap='nav_to' data-url='/pages/purse/purse?type=999'>
-    <image src='/images/积分.png' class='icons'></image>
+    <image src='/images/jifens.png' class='icons'></image>
     <text>我的积分</text>
-    <image src='../../images/右箭头.png' id='arrow'></image>
+    <image src='../../images/rightArrow.png' id='arrow'></image>
   </view>
 
   <view class='title' bindtap='nav_to' data-url='/pages/addr/addr?type=999'>
-    <image src='/images/收货地址.png' class='icons'></image>
+    <image src='/images/receiveAddr.png' class='icons'></image>
     <text>收货地址</text>
-    <image src='../../images/右箭头.png' id='arrow'></image>
+    <image src='../../images/rightArrow.png' id='arrow'></image>
   </view>
   <view class='title' bindtap='nav_to' data-url='/pages/purse/purse?type=999'>
-    <image src='/images/钱包.png' class='icons'></image>
+    <image src='/images/purses.png' class='icons'></image>
     <text>我的钱包</text>
-    <image src='../../images/右箭头.png' id='arrow'></image>
+    <image src='../../images/rightArrow.png' id='arrow'></image>
   </view>
   <view class='title' bindtap='nav_to' data-url='/pages/coupon/coupon'>
-    <image src='/images/优惠券.png' class='icons'></image>
+    <image src='/images/coups.png' class='icons'></image>
     <text>我的优惠券</text>
-    <image src='../../images/右箭头.png' id='arrow'></image>
+    <image src='../../images/rightArrow.png' id='arrow'></image>
   </view>
 
   <view class='title' bindtap='nav_to' data-url='/pages/afterservice/afterservice'>
-    <image src='/images/icon_客服.png' class='icons'></image>
+    <image src='/images/icon_sevr.png' class='icons'></image>
     <text>我的客服</text>
-    <image src='../../images/右箭头.png' id='arrow'></image>
+    <image src='../../images/rightArrow.png' id='arrow'></image>
   </view>
 </view>
 <view>

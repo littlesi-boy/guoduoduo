@@ -1,6 +1,4 @@
-// import ApiList from  '../../config/api';
-// import request from '../../utils/request.js';
-//获取应用实例  
+
 var app = getApp();
 Page({
   data: {
@@ -134,20 +132,5 @@ Page({
       url: '/pages/index/index',
     })
   }
-  // 加载品牌、二级类目数据
-  // getTypeTree(currType) {
-  //   const me = this, _data = me.data;
-  //   if (!_data.typeTree[currType]) {
-  //     request({
-  //       url: ApiList.goodsTypeTree,
-  //       data: { typeId: +currType },
-  //       success: function (res) {
-  //         _data.typeTree[currType] = res.data.data.list;
-  //         me.setData({
-  //           typeTree: _data.typeTree
-  //         });
-  //       }
-  //     });
-  //   }
-  // }
+  
 })

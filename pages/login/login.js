@@ -25,7 +25,7 @@ wx.switchTab({
    
       //插入登录的用户的相关信息到数据库
       wx.login({
-        success: function (res) {
+        success: function (res) { 
           var code = res.code;
         if(res.code){
           wx.showLoading({

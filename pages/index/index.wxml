@@ -14,7 +14,7 @@
   </swiper>
 </view>
 <view id='service' bindtap='serviceLink'>
-   <image src='/images/icon_客服.png'></image>
+   <image src='/images/icon_sevr.png'></image>
 </view>
 <view class="weui-search-bar">
   <view class="weui-search-bar__form">
@@ -53,7 +53,7 @@
 
 <view class='car'>
   <block>
-    <image src='../../images/购物.png' bindtap='nagvite' />
+    <image src='../../images/shoppings.png' bindtap='nagvite' />
   </block>
 </view>
 <view class='discounts'>

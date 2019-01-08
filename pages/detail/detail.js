@@ -1,11 +1,8 @@
-// pages/detail/detail.js
+
 var WxParse = require('../../wxParse/wxParse.js');
 const app = getApp()
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     showModalStatus:false,
     toView: 'descb',
@@ -121,25 +118,7 @@ Page({
         }
       }
     })
-    // wx.hideLoading();
-    // wx.showToast({
-    //   title: '删除成功',
-    // })
-    //   if (res.data.code == 1) {
-    //     var shopcarData = that.data.shopcarData;
-
-    //     that.setData({
-
-    //       shopcarData: shopcarData
-
-    //     })
-    //   }
-    //   }
-    // })
-    //     } else if (res.cancel) {
-    //     }
-    //   }
-    // })
+   
   },
 
   next:function(e){
@@ -221,21 +200,7 @@ Page({
         animationData: animation.export()
       })
     }.bind(this), 500)
-    // wx.request({
-    //   url: that.data.base+'/api/v1/cart/post',
-    //   method: "POST",
-    //   header:{
-    //     token: wx.getStorageSync("token"),
-    //   },
-    //   data: {
-    //     id: id,
-    //     count:count
-    //   },
-    //   success: function (res) {
-    //     console.log('哈哈')
-    //     that.setData({ count: count++, gdd: true,gxx:true})
-    //   }
-    // })
+   
   },
   hideModal: function () {
     // 隐藏遮罩层

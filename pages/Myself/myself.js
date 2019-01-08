@@ -1,4 +1,4 @@
-// pages/myself/myself.js
+
 var app=getApp()
 Page({
   data: {

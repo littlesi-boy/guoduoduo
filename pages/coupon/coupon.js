@@ -1,10 +1,7 @@
-// pages/coupon/coupon.js
+
 const app = getApp()
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     curr: 0,
     list1:[],
@@ -17,10 +14,6 @@ Page({
     this.setData({ curr: type });
   },
 
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     var that=this;
     var curr=that.data.curr;
@@ -86,9 +79,7 @@ Page({
     prevPage.setData({ coupon_money: coupon_money })//设置数据
     prevPage.setData({ coupon_id: id })//设置数据
     
-    // console.log(id)
-    // // prevPage.setData({ pname: pname })//设置数据
-    // // console.log(pname+"----"+name)
+    
    
     wx.navigateBack()
     }

@@ -1,8 +1,8 @@
 <!--pages/createorder/createorder.wxml-->
 
-
-<view class='container'>
- <view class='addr_name' style='display:inline-block'>
+<wxs module="filters1" src="../filter/filter.wxs"></wxs>
+<view class='container' style='margin:10rpx auto;background:#fff'>
+ <view class='addr_name' style='display:inline-block;padding-left:5rpx'>
       <view>
        <image src='/images/addr.svg' style='margin-left:10rpx'></image>
        收货地址：<text style='color:#666;font-size:26rpx'>{{currentArress? currentArress :adds}}</text>
@@ -12,31 +12,34 @@
 <view style='display:inline-block;position:relative;top:11rpx'> 
       <button id='edit' bindtap='editNow'>修改?</button>
   </view>
+    <image src='/images/checkbar.jpg' style='width:100%;height:12rpx'></image>
   </view>
 <block wx:for='{{goods}}' wx:key='*this'>
   <view class='goods'>
-    <view class='goods_num'>
+ <view style='text-align:left;padding-left:6rpx'>
+  <image src='/images/gxxgdd.png' style='width:83rpx;height:60rpx;vertical-align:middle'></image> <text style='font-size:28rpx;color:#666'>杭州果小小水果连锁</text>
+ </view>
+    <view class='goods_num' style='margin-top:0'>
    <image src='{{(base+item.goods_img)}}' style='height:100rpx;width:100rpx'></image>
    <image src='{{item.goods_img}}' style='height:100rpx;width:100rpx'></image>
     <image src='/images/tiaozhuan2.svg' class='icon_right'></image>
-    <text>{{item.goods_name}}</text>
-    </view>
-    <view class='goods_jine'>
-      <view>商品总金额</view>
-      <view>¥{{item.subtotal*item.count}}</view>
+    <text style='padding:0 10rpx; position:relative;top:-10rpx;'>{{filters1.toFix1(item.goods_name)}}</text>
     </view>
   </view>
-  <view class='all'>
+   <view class='goods_jine'>
+      <view>商品总金额</view>
+      <view style='font-style:italic'>¥{{item.subtotal*item.count || item.goods_price*item.count}}</view>
+    </view>
+  <view class='all' style=' border-bottom:2rpx solid #ccc'>
     <view class='yunfei'>
       <view>运费</view>
       <view wx:if="{{item.subtotal}}">
       <view>免邮</view>
       </view>
-    
     </view>
   </view>
    
-     <view class='yunfei' data-money="{{item.subtotal}}" bindtap='to_coupon'>
+     <view class='yunfei' data-money="{{item.subtotal}}" bindtap='to_coupon' style=' border-bottom:2rpx solid #ccc'>
       <view style='margin-left:30rpx'>优惠券</view>
       <view class='youhuiquan'>
       <view wx:if="{{limit_money > 0}}">
@@ -48,47 +51,46 @@
         </view>
       </view>
     </view>
-     <view class='yunfei'>
+     <view class='yunfei' style=' border-bottom:2rpx solid #ccc'>
       <view style='margin-left:30rpx'>合计</view>
       <block wx:if="{{limit_money > 0}}">
       <view wx:if="{{goodsTotal}}">
-      <view>￥{{goodsTotal}}</view>
+      <view style='padding-right: 8rpx;font-style:italic'>￥{{goodsTotal}}</view>
       </view>
       <view wx:else>
-      <view>￥{{goodsTotal}}</view>
+      <view style='padding-right: 8rpx;font-style:italic'>￥{{goodsTotal}}</view>
       </view>
       </block>
       <block wx:else>
       <view wx:if="{{goodsTotal>send_fee}}">
-      <view>￥{{goodsTotal}}</view>
+      <view style='padding-right: 8rpx;font-style:italic'>￥{{goodsTotal}}</view>
       </view>
       <view wx:else>
-      <view>￥{{goodsTotal}}</view>
+      <view style='padding-right: 8rpx;font-style:italic'>￥{{goodsTotal}}</view>
       </view>
       </block>
     </view>
   
-  <view class='remark'>
-    <view>备注</view>
-    <input placeholder='请输入备注信息' bindinput='to_remark'></input>
+  <view class='remark' style=' border-bottom:2rpx solid #ccc'>
+    <view>买家留言</view>
+    <input placeholder='请递上您的奏折' bindinput='to_remark'></input>
   </view>
-
 
   <view class='sub_order'>
   <block wx:if="{{limit_money > 0}}">
     <block wx:if="{{goodsTotal}}">
-    <view  class='total'>合计:<text style='font-size: 32rpx;color: #FF5C38;'>￥{{goodsTotal}}</text></view>
+    <view  class='total'>合计:<text style='font-size: 32rpx;color: #eee;'>￥{{goodsTotal}}</text></view>
     </block>
      <block wx:else>
-       <view  class='total'>合计:<text style='font-size: 32rpx;color: #FF5C38;'>￥{{goodsTotal}}</text></view>
+       <view  class='total'>合计:<text style='font-size: 32rpx;color: #eee;'>￥{{goodsTotal}}</text></view>
       </block>
       </block>
        <block wx:else>
        <block wx:if="{{goodsTotal>send_fee}}">
-    <view  class='total'>合计:<text style='font-size: 32rpx;color: #FF5C38;'>￥{{goodsTotal}}</text></view>
+    <view  class='total'>合计:<text style='font-size: 32rpx;color: #eee;'>￥{{goodsTotal}}</text></view>
     </block>
      <block wx:else>
-       <view  class='total'>合计:<text style='font-size: 32rpx;color: #FF5C38;'>￥{{goodsTotal}}</text></view>
+       <view  class='total'>合计:<text style='font-size: 32rpx;color: #eee;'>￥{{goodsTotal}}</text></view>
       </block>
        </block>
     <view class='sub_bot'  bindtap="show_write">提交订单</view>

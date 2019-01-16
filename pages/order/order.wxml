@@ -54,7 +54,7 @@
       </view>
       <view class='btns'>
         <view class='btn active_btn' bindtap='reserve' data-id='{{item.id}}'>查看详情</view>
-         <view style='margin-left:15rpx' class='btn active_btn' bindtap='payfor' data-count='{{item.order_detail[0].count}}' data-goods_id='{{item.order_detail[0].goods.id}}'>去付款</view>
+         <view style='margin-left:10rpx' class='btn active_btn' bindtap='payfor' data-count='{{item.order_detail[0].count}}' data-goods_id='{{item.order_detail[0].goods.id}}'>去付款</view>
       </view>
    
     </view>

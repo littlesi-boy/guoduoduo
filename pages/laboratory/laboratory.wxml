@@ -1,0 +1,14 @@
+<import src='../publicTemplate/public.wxml' />
+<view>
+  <view style='margin:0 auto;color:#666;font-size:30rpx;margin-top:50rpx'>
+    更多功能正在开发当中,关注果多多微信公众号享最新技术体验
+  </view>
+</view>
+  <view style='margin-top:150rpx;text-align:center'>
+    <view>   相关公众号  </view>
+    <image src='/images/tiaoMa.jpg' style='width:100rpx;height:100rpx'></image>
+  </view>
+<view>
+  <template is='logo'>
+  </template>
+</view>

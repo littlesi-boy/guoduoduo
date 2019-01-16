@@ -17,11 +17,11 @@
   <view class='driver'>
     <view class='name'>
       <view>配送小哥</view>
-      <view class='mingzi'>王星星</view>
+      <view class='mingzi'>陈树大</view>
     </view>
     <view class='tel'>
       <image src='/images/tel.svg'></image>
-      <view>王星星</view>
+      <view>陈树大</view>
     </view>
   </view>
   </view>

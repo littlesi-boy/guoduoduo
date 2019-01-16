@@ -35,11 +35,12 @@
 <view id='banner'>
   <block wx:for="{{fruitUrls}}" wx:key="*this">
 
-    <image src='{{item.icon}}' class='bar-fruits'/>
-    <view id='index-des'  bindtap='skip' data-id='{{item.id}}'>
+    <view id='tubiao'>
+    <image src='{{item.icon}}' bindtap='skip' class='bar-fruits' style='width:95rpx;height:80rpx;'/>
+     <view id='index-des'  bindtap='skip' data-id='{{item.id}}' >
       <text>{{item.title}}</text>
     </view>
-  
+    </view>  
   </block>
 </view>
 <view class='example'>
@@ -70,11 +71,12 @@
 </view>
 
 <view class="weui-panel">
-  <block wx:for="{{arrayList}}" wx:key='{{index}}'>
+  <block wx:for="{{arrayList}}" wx:key='{{index}}' >
+   <view style='margin-bottom:8rpx'>
     <image src="{{item.main_img}}" id='imageList' bindtap="pursess" data-id='{{item.id}}'></image>
     <view class='list_right' bindtap="pursess" data-id='{{item.id}}'>
       <view class='name' style='height:140rpx'>
-        <text id='first-child' style='color:#666'>立减{{item.market_price-item.sale_price}}元</text>
+        <text id='first-child' style='color:#333;font-weight:bold'>立减{{item.market_price-item.sale_price}}元</text>
         <text style='display:inline-block;font-family:"隶书";margin-left:2%;margin-top:15rpx;font-weight:bold;font-size:25rpx'>{{item.name}}</text> </view>
       <view class='num'>
         <progress style='margin-left:40rpx;width:70%' percent="{{per}}" stroke-width='9' activeColor='skyblue' border-radius='10rpx' />
@@ -96,6 +98,7 @@
             <view class='cart_num' wx:else>{{item.goods_count}}</view> -->
       </view>
     </view>
+   </view>
   </block>
 
 </view>

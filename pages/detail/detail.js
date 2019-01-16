@@ -165,7 +165,7 @@ Page({
           res.data.data.list.sale_price = res.data.data.market_price
           res.data.data.list.market_price="";
         }
-        that.setData({ content: res.data.data.list})
+        that.setData({ content: res.data.data.list, subtotal: res.data.data.list.sale_price})
       }
     })
   

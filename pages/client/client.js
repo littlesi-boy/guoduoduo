@@ -17,11 +17,10 @@ Page({
   },
   return_home: function (e) {
    wx.navigateBack()
-
   },
   clear: function (e) {
     e.detail.value = ''
-  },
+  }, 
   bindRegionChange: function (e) {
     var value = e.detail.value;
     this.setData({ region: value })

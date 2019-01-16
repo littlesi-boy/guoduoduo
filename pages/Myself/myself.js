@@ -80,11 +80,11 @@ swip_to:function(e){
       showModalStatus: true,
     })
     setTimeout(function () {
-      animation.translateY(-300).step()
+      animation.translateY(-220).step()
       that.setData({
         animationData: animation.export()
       })
-    }.bind(this), 500)
+    }.bind(this), 300)
   },
   hideModal: function () {
     // 隐藏遮罩层
@@ -99,7 +99,7 @@ swip_to:function(e){
       animationData: animation.export(),
     })
     setTimeout(function () {
-      animation.translateY(-300).step()
+      animation.translateY(-220).step()
       this.setData({
         animationData: animation.export(),
         showModalStatus: false

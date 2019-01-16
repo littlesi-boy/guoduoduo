@@ -28,8 +28,8 @@ Page({
     hasMore: true,
     interval1:'',
     coupon_putawary: "",
-    discounts: [{ id: 0, url: './image/优惠券.png' }, { id: 1, url: './image/优惠券.png' }, { id: 2, url: './image/优惠券.png' }],
-    fruitUrls: [{ icon: '', title: '店长推荐' }, { icon: '', title: '当季热销' }, { icon: '', title: '进口水果' }, { icon: '', title: '其他商品' }],
+    discounts: [{ id: 0, url: './image/youhuiquan1.jpg' }, { id: 1, url: './image/youhuiquan2.jpg' }, { id: 2, url: './image/youhuiquan3.jpg' }],
+    fruitUrls: [{ icon: '/images/first.png', title: '店长推荐',id:1 }, { icon: '/images/second.png', title: '当季热销',id:2 }, { icon: '/images/third.png', title: '进口水果',id:3 }, { icon: '/images/last.png', title: '其他商品',id:4 }],
     indicatorDots: true,
     autoplay: true,
     duration: 1000
@@ -216,10 +216,9 @@ Page({
       url: app.globalData.base + '/api/v1/cate/icon',
       method: 'GET',
       success: res => {
+       
         if (res.statusCode == 200) {
-          that.setData({
-            fruitUrls: res.data.data.list
-          })
+         return 1;
         }
         return -1;
       }
@@ -281,9 +280,20 @@ Page({
   touchSingle: function (e) {
     console.log(e.currentTarget.dataset.tip)
     let disc = 'discounts[' + e.currentTarget.dataset.tip + '].url'
-    this.setData({
-      [disc]: './image/我的优惠券.png'
-    })
+    if (e.currentTarget.dataset.tip==0){
+      this.setData({
+        [disc]: './image/youhuiquans1.jpg'
+      })
+    } else if (e.currentTarget.dataset.tip == 1){
+      this.setData({
+        [disc]: './image/youhuiquans2.jpg'
+      })
+    }else{
+      this.setData({
+        [disc]: './image/youhuiquans3.jpg'
+      })
+    }
+   
   },
 
   durationChange: function (e) {

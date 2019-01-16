@@ -16,10 +16,10 @@ page {
 }
 #service{
   position:fixed;
-  top: 60%;
+  top: 50%;
   left: 3%;
   z-index: 1000;
-  border: 4rpx double orangered;
+  border: 4rpx double rgb(31, 238, 135);
   border-radius: 50%;
   padding-top: 5rpx;
   opacity: 0.9;
@@ -44,8 +44,9 @@ page {
   display: inline-block;
   font-size: 0.5rem;
   width: 90rpx;
+  text-align: center;
   height: 30rpx;
-  background-color: rgba(248, 172, 172, 0.6);
+  background-color: rgba(172, 248, 232, 0.6);
   border-radius: 10rpx;
 }
 .num{
@@ -118,21 +119,20 @@ page {
  position: relative
 }
 .discounts{
-  height: 100rpx;
-  background-color: rgba(148, 141, 141 , 0.2);
-  padding: 15rpx;
+  height: 105rpx;
+  background-color: #fff;
+  padding: 10rpx;
   display: flex;
+  width: 100%;
   justify-content: space-around;
   overflow: hidden
 }
 .discounts image{
-  line-height: 110rpx;
-  margin-left: 15rpx;
-  height: 2.5rem;
-  width: 3rem;
+  line-height: 105rpx;
+  height: 99rpx;
+  width: 155rpx;
   border:2px dotted orange;
   padding: 5rpx;
-  background-color: orange
 }
 #tip text:first-child{
   font-size: 1rem;
@@ -152,30 +152,28 @@ page {
  padding-top: 10rpx;
   width: 100%;
   height: 130rpx;
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
+display: flex;
+justify-content: space-around;
   background-color: rgba(252, 209, 153, 0.6);
-  border-top: 1px solid #aaa;
+  border-top: 1px solid #bbb;
   border-bottom: 2px solid rgb(243, 238, 238);
-  padding-left: 5%;
+
 }
 image.slide-image{
   width: 100%;
   height: auto
 }
 .car > image{
-  display: inline-block;
   position: fixed;
   left: 88%;
-  top: 61%;
+  top: 51%;
   width: 1.6rem;
-  height: 1.2rem;
+  height: 1.3rem;
   object-fit: cover;
   z-index: 2;
-  border: 2px solid orangered;
+  border: 3px solid rgb(31, 238, 135);
   border-radius: 50%;
-  padding: 2rpx 3rpx;
+  padding: 2rpx 4rpx 2rpx 3rpx;
   opacity: 0.9
 }
 #tip-des{
@@ -191,25 +189,31 @@ color: rgb(17, 112, 150);
 }
 #index-des{
   width: 100%;
-  margin-top: 11%;
- height: auto;
- position: relative;
- left: -85rpx;
+  margin-top: 7rpx;
+ height: 49rpx;
+display: flex;
+justify-content: space-around;
+padding-left: 15rpx;
+}
+
+#index-des text{
+font-size: 0.8rem;
+width: 150rpx;
 
 }
-#index-des text{
-display: inline-block;
-font-size: 0.7rem;
-width: 106rpx;
-margin-left: 9rpx;
+#index-des text:first-of-type{
+  margin-left: 5rpx;
 }
-#banner .bar-fruits{
-  object-fit: cover;
-  height: 1.6rem;
-  border:3px solid rgb(245, 188, 142);
-  border-radius: 50%;
-  padding: 5rpx;
-  margin-left: 1%
+#banner #tubiao image{
+  display: flex;
+  justify-content:space-around;
+  padding-left: 14rpx;
+}
+#banner #tubiao>.bar-fruits{
+  object-fit: contain;
+  width: 90rpx;
+  height: 80rpx;
+  margin-left: 18rpx
 }
 .example {
  display: block;

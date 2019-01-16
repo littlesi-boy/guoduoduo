@@ -5,6 +5,7 @@
     "pages/auditing/auditing",
     "pages/carShop/carShop",
     "pages/hot/hot",
+    "pages/laboratory/laboratory",
     "pages/addr/addr",
     "pages/nickName/nickName",
     "pages/order/order",

@@ -6,9 +6,9 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 onLoad:function(option){
-  if(app.globalData.userInfo){
+  if(app.globalData.userInfo!=null){
 wx.switchTab({
-  url: '/pages/index/index',
+  url: '../index/index'
 })
   }else{
     wx.showToast({

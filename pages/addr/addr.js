@@ -29,49 +29,7 @@ Page({
   },
 
   onLoad: function (options) {
-    var that = this;
-    var userInfo = wx.getStorageSync("userInfo");
-    that.setData({
-      userInfo:userInfo
-    })
-    wx.request({
-      url: getApp().globalData.baseUrl + '/consignee/get',
-      method: "GET",
-      header: {
-        token: wx.getStorageSync("token"),
-      },
-      success: function (res) {
-        console.log(res)
-        if(res.statusCode==200){
-          var lists = res.data.data.list
-          lists.forEach(function(item){
-            item.checked=false
-          })
-          that.setData({ list: lists })
-        }
-      }
-    })
-  },
-binds:function(e){
-  var currentArress=e.currentTarget.dataset.addrs
-  var detail = e.currentTarget.dataset.detail
-  app.globalData.currentArress = currentArress
-  console.log(currentArress)
-  var items = this.data.list;
-  items.forEach(function(item){
-    if (item.detail == detail){
-        app.globalData.currentAddr=item.id
-    }
-  })
-  for (var i = 0; i < items.length; i++) {
-    for(var j=0;j<items.length;j++){
-      if (items[j].checked && j!=i) {
-        items[i].checked = false
-      }
-    }
-    
-  }
-  setTimeout(function () { wx.navigateBack()}, 1400)
+   
 },
 radioChange: function(e){
   var id=e.detail.value
@@ -87,8 +45,50 @@ radioChange: function(e){
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function (options) {
+    var that = this;
+    var userInfo = wx.getStorageSync("userInfo");
+    that.setData({
+      userInfo: userInfo
+    })
+    wx.request({
+      url: getApp().globalData.baseUrl + '/consignee/get',
+      method: "GET",
+      header: {
+        token: wx.getStorageSync("token"),
+      },
+      success: function (res) {
+        console.log(res)
+        if (res.statusCode == 200) {
+          var lists = res.data.data.list
+          lists.forEach(function (item) {
+            item.checked = false
+          })
+          that.setData({ list: lists })
+        }
+      }
+    })
+  },
+  binds: function (e) {
+    var currentArress = e.currentTarget.dataset.addrs
+    var detail = e.currentTarget.dataset.detail
+    app.globalData.currentArress = currentArress
+    console.log(currentArress)
+    var items = this.data.list;
+    items.forEach(function (item) {
+      if (item.detail == detail) {
+        app.globalData.currentAddr = item.id
+      }
+    })
+    for (var i = 0; i < items.length; i++) {
+      for (var j = 0; j < items.length; j++) {
+        if (items[j].checked && j != i) {
+          items[i].checked = false
+        }
+      }
 
+    }
+    setTimeout(function () { wx.navigateBack() }, 1400)
   },
 
   /**

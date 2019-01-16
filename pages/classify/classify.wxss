@@ -50,7 +50,7 @@ page{
   height: 100%;
   overflow: hidden;
   width: auto;
-  background: rgba(250, 86, 127,0.1);
+  background: #fff;
 }
 
 .right text {

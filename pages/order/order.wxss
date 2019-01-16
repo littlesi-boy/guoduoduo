@@ -81,7 +81,7 @@ page{
   text-align: right;
   display: inline-block;
   font-size: 28rpx;
-  margin-left: 300rpx;
+  margin-left: 360rpx;
 }
 
 .btns .btn{

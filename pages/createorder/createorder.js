@@ -256,8 +256,6 @@ to_addr:function(event){
    */
   onLoad: function (options) {
     var that = this
-    
-
     wx.request({
       url: getApp().globalData.baseUrl + '/consignee/get',
       method:'GET',
@@ -294,7 +292,7 @@ var params=that.data.goods
 var sum=0
 if(params.length>0){
   params.forEach(function(item){
-    sum+=item.subtotal*item.count
+    sum += item.subtotal * item.count ? item.subtotal * item.count : item.goods_price * item.count
   })
   that.setData({
     goodsTotal:sum

@@ -1,16 +1,21 @@
 <view wx:if="{{canIUse}}">
-    <view class='header'>
-        <image src='/images/guoduoduo.png'></image>
-    </view>
-<view style='width:55rpx;height:55rpx;margin:0 auto'> <open-data type="userAvatarUrl"></open-data></view>
-    <view class='content'>
-        <view>申请获取以下权限</view>
-        <text>获得你的公开信息(昵称，头像等)</text>
-    </view>
- 
-<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo"
-  >获取用户信息</button
->
+  <view class='header'>
+    <image src='/images/guoduoduo.png'></image>
+  </view>
+   <view class="box">
+    <text class="line"></text>
+    <text class="text">服务至上</text>
+    <text class="line"></text>
+  </view>
+  <view style='width:100rpx;height:100rpx;margin:0 auto;margin-top:50rpx;margin-bottom:20rpx'>
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class='content'>
+    <view>申请获取以下权限</view>
+    <text>获得您的公开信息(昵称，头像等)</text>
+  </view>
+
+  <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取您的信息</button>
 </view>
- 
+
 <view wx:else>请升级微信版本</view>
